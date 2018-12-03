@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://github.com/podyankee/front-shop",
+  "homepage": "git@github.com:podyankee/front-shop.git",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
