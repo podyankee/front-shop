@@ -1,0 +1,111 @@
+html
+	font-size: 16px
+	font-family: $regular-font
+	height: 100%
+
+body
+	background-color: $main-bg-color
+	margin: 0
+	-webkit-font-smoothing: antialiased
+	color: $base-text-color
+	height: 100%
+
+.debug
+	+debug(rgba(255, 192, 203, 0.5), 1px solid yellow)
+	z-index: 2
+
+section
+	position: relative
+	padding: 40px 0
+
+
+ul, li
+	padding: 0
+	margin: 0
+	list-style: none
+
+p
+	margin: 0
+
+h1, h2, h3, h4, h5
+	margin-top: 0
+	margin-bottom: 0
+	font-weight: normal
+
+*
+	box-sizing: border-box
+a
+	color: $link-color
+	text-decoration: none
+
+audio, canvas, iframe, img, svg, video, textarea
+	vertical-align: middle
+
+.container
+	+wrapper
+
+.sandwich
+	cursor: pointer
+	height: 14px
+	position: relative
+	width: 23px
+	&--active
+		.sandwich__line
+			&--top
+				top: 6px
+				transform: rotate(45deg)
+
+			&--middle
+				opacity: 0
+
+			&--bottom
+				top: 6px
+				transform: rotate(-45deg)
+
+	&__line
+		background-color: $white
+		display: block
+		height: 2px
+		left: 0
+		position: absolute
+		transition: all linear .4s
+		width: 100%
+
+		&--top
+			top: 0
+
+		&--middle
+			top: 6px
+
+		&--bottom
+			top: 12px
+.section-header
+	display: flex
+	align-items: center
+	&__right
+		margin-left: auto
+	&__link
+		color: $link-color
+		font-weight: 600
+		text-decoration: underline
+		display: inline-block
+.btn
+	background-color: $action-color
+	border: 0
+	cursor: pointer
+	font-weight: 600	
+	line-height: 20px
+	padding: 10px 20px
+	border-radius: 4px
+
+.btn
+	+btn
+	margin: 0 auto
+.box
+	width: 400px
+	height: 350px
+	overflow: scroll
+	margin: 0 auto
+	margin-top: 50px
+	padding: 10px
+	background: $white
