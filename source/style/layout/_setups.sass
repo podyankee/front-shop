@@ -97,15 +97,20 @@ audio, canvas, iframe, img, svg, video, textarea
 	line-height: 20px
 	padding: 10px 20px
 	border-radius: 4px
-
-.btn
-	+btn
-	margin: 0 auto
-.box
-	width: 400px
-	height: 350px
-	overflow: scroll
-	margin: 0 auto
-	margin-top: 50px
-	padding: 10px
-	background: $white
+	display: flex
+	align-items: center
+	& > *
+		&:not(:last-child)
+			margin-right: 10px
+	&__icon
+		+dem(25px)
+	&.btn
+		&--fill
+			width: 100%
+			justify-content: center
+.count-text
+	font-size: 14px
+	color: $placeholder-color
+	margin-left: 5px
+.s-bg-white
+	background-color: $white

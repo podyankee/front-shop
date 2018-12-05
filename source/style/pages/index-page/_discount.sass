@@ -1,0 +1,88 @@
+.product-prev
+	border: 2px solid transparent
+	transition: $trs
+	&:hover
+		border-color: $action-color
+		box-shadow: 0 0 30px 0 rgba(0,0,0,0.1)
+		.product-prev
+			&__footer
+				opacity: 1
+	&__header
+		height: 140px
+		padding: 10px
+		position: relative
+		display: flex
+		align-items: center
+		margin-bottom: 15px
+	&__body
+		padding: 20px
+		display: block
+	&__img
+		+img-responsive
+		margin-top: auto
+	&__marks
+		position: absolute
+		display: flex
+		left: 10px
+		top: 0
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+	&__mark
+		border-radius: 0 0 4px 4px
+		height: 30px
+		line-height: 30px
+		padding: 0 4px
+		font-size: 14px
+		font-weight: 600
+		&.product-prev__mark
+			&--bg
+				&-yellow
+					background-color: $action-color
+				&-green
+					background-color: #1fa349
+					color: $white
+	&__name
+		font-size: 14px
+		font-weight: 600
+		color: $base-text-color
+	&__title
+		height: 55px
+		margin-bottom: 20px
+	&__footer
+		transition: $trs
+		opacity: 0
+	&__info
+		display: flex
+		align-items: flex-end
+		font-size: 14px
+		margin-bottom: 15px
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+		&-label
+			color: #1fa349
+			font-size: 10px
+			text-transform: uppercase
+		&-value
+			color: $base-text-color
+	&__price
+		display: flex
+		align-items: center
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+		&-old
+			font-size: 14px
+			color: $placeholder-color
+			padding: 0 5px
+			text-decoration: line-through
+		&-current
+			font-size: 18px
+			font-weight: 800
+			color: $base-text-color
+.products-prev
+	+row-flex
+.product-prev
+	+col
+	+size(3)
