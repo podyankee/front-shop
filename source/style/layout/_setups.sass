@@ -99,6 +99,9 @@ audio, canvas, iframe, img, svg, video, textarea
 	border-radius: 4px
 	display: flex
 	align-items: center
+	transition: $trs	
+	&:hover
+		background-color: #f0de01
 	& > *
 		&:not(:last-child)
 			margin-right: 10px
@@ -108,9 +111,14 @@ audio, canvas, iframe, img, svg, video, textarea
 		&--fill
 			width: 100%
 			justify-content: center
+		&--disabled
+			opacity: 0.5
 .count-text
 	font-size: 14px
 	color: $placeholder-color
 	margin-left: 5px
-.s-bg-white
+.s
+	&-bg-white
 	background-color: $white
+	&-sales-leaders
+		margin-bottom: 20px2
