@@ -16,8 +16,29 @@ $(document).ready(function(){
 	} 
 };
 
-		sandwich();
+var productPrevSlider = function () {
+	var sliderCount = $('.product-slider__count'),
+		prodSlider = $('.js-product-slider');
+
+		prodSlider.on('init afterChange', function (e, slick, currentSlide, nextSlide) {
+			var i = (currentSlide ? currentSlide : 0) + 1;
+			sliderCount.text('Страница ' + i + ' из ' + slick.slideCount);
+		})
+
+
+	prodSlider.slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '.slider-nav--prev',
+		nextArrow: '.slider-nav--next',
+		infinite: false
+	});
+};
+
+
+	sandwich();
 	popularCategoriesSlider();
+	productPrevSlider();
 
 	});
 	

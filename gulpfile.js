@@ -42,6 +42,7 @@ $.gulp.task('build', $.gulp.series(
 		'css:vendor',
 		'sass:build-min',
 		'copy:image:build',
+		'svg:sprite:build',
 		'js:vendor:build',
 		'js:process:build-min'
 	)

@@ -16,7 +16,7 @@ module.exports = function () {
 	});
 
 	$.gulp.task('copy:image:build', () => {
-		return $.gulp.src(imgPATH.input)
+		return $.gulp.src([imgPATH.input, "!./source/img/sprite.svg"])
 			.pipe(cache(imagemin([
 				imagemin.gifsicle({ interlaced: true }),
 				imagemin.jpegtran({ progressive: true }),
@@ -26,7 +26,17 @@ module.exports = function () {
 					max: 75,
 					quality: 'medium'
 				}),
-				imagemin.svgo(),
+				imagemin.svgo({
+					plugins: [
+						{ removeViewBox: true },
+						{ cleanupIDs: false },
+						{ removeUnknownsAndDefaults: false },
+						{ cleanupIDs: false },
+						{ collapseGroups: false },
+						{ mergePaths: false },
+						{ removeUselessDefs: false }
+					]
+				}),
 				imagemin.optipng({ optimizationLevel: 3 }),
 				pngquant({ quality: '65-70', speed: 5 })
 			], {

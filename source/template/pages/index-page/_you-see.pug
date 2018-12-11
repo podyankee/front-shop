@@ -3,4 +3,18 @@ section.s-product-slider.s-big-white
 		.section-header
 			h2.title-section Вы смотрели
 			.section-header__right
-		.product-slider
+				span.product-slider__count
+		.product-prev-slider
+			.slider-nav.slider-nav--prev
+				+icon('chevron-left', 'slider-nav__icon')
+			.slider-nav.slider-nav--next
+				+icon('chevron-right', 'slider-nav__icon')
+			.js-product-slider
+				include ../../elements/product/_prev-1
+				include ../../elements/product/_prev-2
+				include ../../elements/product/_prev-3
+				include ../../elements/product/_prev-4
+				include ../../elements/product/_prev-1
+				include ../../elements/product/_prev-2
+				include ../../elements/product/_prev-3
+				include ../../elements/product/_prev-4

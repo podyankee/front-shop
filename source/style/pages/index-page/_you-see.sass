@@ -1,0 +1,23 @@
+.product-prev-slider
+	position: relative
+.slider-nav
+	+centered('y')
+	opacity: 0.5
+	transition: $trs
+	cursor: pointer
+	&:hover
+		opacity: 1
+	&.slider-nav
+		&--prev
+			left: -55px
+		&--next
+			right: -55px
+		&:hover
+			opacity: 0.5
+	&__icon
+		+dem (30px)
+		fill: $base-text-color
+.slider-nav
+	&.slick-disabled
+		cursor: default
+            
