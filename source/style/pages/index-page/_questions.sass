@@ -1,0 +1,44 @@
+.upgrade
+	display: flex
+	align-items: center
+	font-size: 14px
+	& > *
+		&:not(:last-child)
+			margin-right: 10px
+	&__icon
+		+dem(10px)
+		fill: $white
+		&-wrapper
+			+dem(16px)
+			border-radius: 50%
+			background-color: $placeholder-color
+			display: flex
+			align-items: center
+			justify-content: center
+.questions
+	display: flex
+	align-items: center
+	justify-content: space-between
+.ask-your-question
+	display: flex
+	align-items: center
+	& > * 
+		&:not(:last-child)
+			margin-right: 30px
+	&__list
+		display: flex
+		align-items: center
+		& > * 
+			&:not(:last-child)
+				margin-right: 20px
+	&__link
+		display: flex
+		align-items: center
+		& > * 
+			&:not(:last-child)
+				margin-right: 10px
+	&__icon
+		+dem(24px)
+		fill: $base-text-color
+	&__text
+		color: $base-text-color
