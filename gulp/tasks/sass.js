@@ -28,9 +28,11 @@ module.exports = function () {
 	});
 	$.gulp.task('sass:build', () => {
 		return $.gulp.src(stylesPATH.input)
+			.pipe(sourcemaps.init())
 			.pipe($.gp.sass())
 			.pipe(gcmq())
 			.pipe($.gp.autoprefixer({ browsers: $.config.autoprefixerConfig }))
+			.pipe(sourcemaps.write())
 			.pipe(csscomb())
 			.pipe($.gulp.dest($.config.root +"/assets/css"))
 	});

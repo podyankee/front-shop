@@ -1,0 +1,70 @@
+mixin footerNavLink(link, text, descr)
+	li.footer-nav__item
+		a(href=link).footer-nav__link=text
+		if(descr)
+			span.footer-nav__descr=descr
+
+footer.footer
+	.footer-top
+		.container
+			.footer-callback
+				img(src="assets/img/wiki.png", alt="alt").footer-callback__img
+				.order-callback.footer-callback__order-callback
+					span.order-callback___description Звоните круглосуточно
+					a(href="tel:8 800 334-88-88").order-callback__phone 8 800 334-88-88
+					a(href="#").order-callback__link Заказать звонок	
+			.footer-main
+				.footer__col
+					span.footer__title О нас
+					ul.footer-nav__list
+						+footerNavLink('#', 'Оплата и доставка', '')
+						+footerNavLink('#', 'Гарантия', '')
+						+footerNavLink('#', 'Услуги по обработке металла', '')
+						+footerNavLink('#', 'Компания', '')
+						+footerNavLink('#', 'Контакты', 'связь с директором')
+				.footer__col
+					span.footer__title Каталог
+					ul.footer-nav__list
+						+footerNavLink('#', 'Все для кровли', '')
+						+footerNavLink('#', 'Фасад', '')
+						+footerNavLink('#', 'Профнастил', '')
+						+footerNavLink('#', 'Листовой прокат', '')
+						+footerNavLink('#', 'Рулонная сталь', '')
+				.footer__col
+					span.footer__title Принимаем к оплате
+					.footer__block
+						.payment-types
+							ul.payment-types__list
+								li.payment-types__item
+									+icon('visa','payment-types__logo')
+								li.payment-types__item
+									+icon('mastercard','payment-types__logo')
+								li.payment-types__item
+									+icon('Mir','payment-types__logo')
+							a(href="#").link-underline.link-yellow Оплата заказа онлайн
+					.footer__block
+						span Акции и спецпредложения 
+				.footer__col
+					.footer__block
+						span.footer__title Контакты
+						.footer-contacts
+							+icon('location', 'footer-contacts__icon')
+							span.footer-contacts__title Офис
+							p.footer-contacts__text 111011, London, Queeen Mary str., 11 - 9
+								a(href="#").footer-contacts__link на карте
+					.footer__block
+						.footer-contacts
+							+icon('location', 'footer-contacts__icon')
+							span.footer-contacts__title Производство и склад
+							p.footer-contacts__text 111011, Birmingham, Locksmith str., 10 - 7
+								a(href="#").footer-contacts__link на карте
+
+	.footer-bottom
+		.container
+			.footer-bottom__line
+				span.copyright &copy; 2018 Завод «Веневский»
+				a(href="#").footer-bottom__link Политика конфиденциальности
+				a(href="#").footer-bottom__link Карта сайта
+			.footer-bottom__line
+				p.footer-bottom__text Сайт venev.ru давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+				p.footer-bottom__text А также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации.
