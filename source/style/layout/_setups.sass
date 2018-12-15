@@ -137,3 +137,11 @@ audio, canvas, iframe, img, svg, video, textarea
 	color: $base-text-color
 
 
+.header__menu, .header__item--mobile-hide, .header-address
+	+md(display,none)
+.header__mobile
+	display: none
+	+md(display,block)
+.header__item--mobile-hide
+.header__top
+	+md(display,none)

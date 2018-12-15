@@ -59,6 +59,7 @@
 		.container
 			display: flex
 			align-items: center
+			position: relative
 			& > *
 				&:not(:last-child)
 					margin-right: 30px
@@ -142,3 +143,102 @@
 		line-height: 18px
 .header__basket-prev
 	margin-left: auto
+
+// Catalog nav
+
+.catalog-nav
+	&.catalog-nav--active
+		.catalog-nav__body
+			opacity: 1
+	&__body
+		position: absolute
+		transition: $trs
+		opacity: 0
+		left: 80px
+		top: calc(100% - 15px)
+		color: $base-text-color
+		background-color: $white
+		border-radius: 4px
+		box-shadow: 0 0 5px 0 rgba(159, 197, 178, 0.5)
+		z-index: 1
+		&:before
+			content: ''
+			+arr(20, 10, $white, t)
+			position: absolute
+			left: 183px
+			top: -10px
+	&__label
+		display: flex
+		align-items: center
+		padding: 6px 25px 6px 15px
+		transition: $trs
+		cursor: pointer
+		position: relative
+		& > *
+			&:not(:last-child)
+				margin-right: 5px
+		&:hover
+			background-color: $action-color
+		&:after
+			content: ''
+			+arr(5, 10, $base-text-color, r)
+			position: absolute
+			top: 10px
+			right: 20px
+		&-text
+			font-weight: 600
+			font-size: 14px
+			line-height: 18px
+	&__list
+		width: 255px
+		position: relative
+
+// Catalog-subnav
+.catalog-nav
+	&__item
+		&:first-child
+			border-radius: 4px 4px 0 0
+			overflow: hidden
+		&:last-child
+			border-radius: 0 0 4px 4px
+			overflow: hidden
+		&:hover
+			.catalog-subnav
+				display: flex
+
+.catalog-subnav
+	position: absolute
+	left: calc(100% - 2px)
+	overflow: auto
+	top: 0
+	bottom: 0
+	background-color: $white
+	border-left: 1px solid $action-color
+	border-radius: 0 4px 4px 0
+	width: 670px
+	padding-top: 15px
+	padding-bottom: 0
+	+row-flex
+	display: none
+	&__col
+		+col
+		+size(6)
+	&__header
+		margin-bottom: 10px
+	&__title
+		font-weight: 600
+		font-size: 18px
+		line-height: 26px
+	&__list
+		& > *
+			margin: 10px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 15px
+	&__item
+		font-weight: 400
+		font-size: 14px
+		line-height: 18px
+	&__link
+		color: $base-text-color

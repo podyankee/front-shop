@@ -1,10 +1,25 @@
 $(document).ready(function(){
     
 	var sandwich = function () {
-		$(document).on('click', '.sandwich', function () {
-			$(this).toggleClass('sandwich--active');
-
+		$(document).on('click', '.catalog-nav__header', function () {
+			var sandwich = $(this).find('.sandwich'),
+			catalog = $(this).parent();
+			sandwich.toggleClass('sandwich--active');
+			catalog.toggleClass('catalog-nav--active');
 		});
+	};
+
+	var catalogNavHover = function () {
+		$('.catalog-nav__item').hover(
+			function () {
+				var catalogBody = $(this).closest('.catalog-nav__body');
+				catalogBody.css('width', 825);
+			},
+			function () {
+				var catalogBody = $(this).closest('.catalog-nav__body');
+				catalogBody.css('width', 'auto');
+			}
+		);
 	};
 
 	var popularCategoriesSlider = function () {
@@ -23,7 +38,7 @@ var productPrevSlider = function () {
 		prodSlider.on('init afterChange', function (e, slick, currentSlide, nextSlide) {
 			var i = (currentSlide ? currentSlide : 0) + 1;
 			sliderCount.text('Страница ' + i + ' из ' + slick.slideCount);
-		})
+		});
 
 
 	prodSlider.slick({
@@ -39,6 +54,7 @@ var productPrevSlider = function () {
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
+	catalogNavHover();
 
 	});
 	

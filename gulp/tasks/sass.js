@@ -2,7 +2,7 @@
 
 let plumber = require('gulp-plumber'),
 	autoprefixer = require('gulp-autoprefixer'),
-	csso = require('gulp-csso'),
+	cleanCSS = require('gulp-clean-css'),
 	csscomb = require('gulp-csscomb'),
 	sourcemaps = require('gulp-sourcemaps'),
 	gcmq = require('gulp-group-css-media-queries'),
@@ -33,7 +33,7 @@ module.exports = function () {
 			.pipe(gcmq())
 			.pipe($.gp.autoprefixer({ browsers: $.config.autoprefixerConfig }))
 			.pipe(sourcemaps.write())
-			.pipe(csscomb())
+			.pipe(cleanCSS({ level: 2 }))
 			.pipe($.gulp.dest($.config.root +"/assets/css"))
 	});
 	$.gulp.task('sass:build-min', () => {
@@ -42,7 +42,7 @@ module.exports = function () {
 			.pipe(gcmq())
 			.pipe($.gp.autoprefixer({ browsers: $.config.autoprefixerConfig }))
 			.pipe(csscomb())
-			.pipe(csso())
+			.pipe(cleanCSS({ level: 2 }))
 			.pipe(rename('app.min.css'))
 			.pipe($.gulp.dest($.config.root + "/assets/css"))
 	});
