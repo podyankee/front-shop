@@ -91,15 +91,16 @@ audio, canvas, iframe, img, svg, video, textarea
 		display: inline-block
 .btn
 	background-color: $action-color
-	border: 0
 	cursor: pointer
 	font-weight: 600	
 	line-height: 20px
-	padding: 10px 20px
+	padding: 8px 20px
 	border-radius: 4px
 	display: flex
 	align-items: center
 	transition: $trs	
+	border: 2px solid transparent
+	white-space: nowrap
 	&:hover
 		background-color: #f0de01
 	& > *
@@ -113,6 +114,16 @@ audio, canvas, iframe, img, svg, video, textarea
 			justify-content: center
 		&--disabled
 			opacity: 0.5
+	&--bg-green
+		background-color: $button-green
+		color: $white
+	&--border-green
+		border-color: $button-green
+		background-color: $white
+		color: $button-green
+	&--size
+		&-s
+			padding: 3px 15px
 .count-text
 	font-size: 14px
 	color: $placeholder-color
