@@ -117,10 +117,14 @@ audio, canvas, iframe, img, svg, video, textarea
 	&--bg-green
 		background-color: $button-green
 		color: $white
+		&:hover
+			background-color: lighten($button-green, 10%)
 	&--border-green
 		border-color: $button-green
 		background-color: $white
 		color: $button-green
+		&:hover
+			background-color: $white
 	&--size
 		&-s
 			padding: 3px 15px
