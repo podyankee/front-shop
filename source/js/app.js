@@ -66,11 +66,21 @@ var productPrevSlider = function () {
 		});
 	};
 
+	var popupLink = function () {
+		$('.js-popup-link').magnificPopup({
+			showCloseBtn: false
+		});
+		$(document).on('click', '.popup__close',function () {
+			$.magnificPopup.close();
+		});
+	};
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
 	catalogNavHover();
 	locationChoose();
+	popupLink();
 
 	});
 	

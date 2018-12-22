@@ -1,0 +1,141 @@
+// Common popup styles
+.form
+	&__body
+		margin-bottom: 30px
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&__footer
+		& > *
+			margin: 10px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+.popup
+	border-radius: 8px
+	position: relative
+	max-width: 520px
+	margin: 50px auto
+	&__header
+		display: flex
+		align-items: center
+		background-color: $light-bg
+		padding: 15px 25px 15px 40px
+	&__close
+		display: flex
+		align-items: center
+		+dem(30px)
+		justify-content: center
+		margin-left: auto
+		cursor: pointer
+		opacity: 0.2
+		&:hover
+			opacity: 0.7
+			.popup__close-icon
+				transform: scale(1.5)
+				font-weight: 700
+		&-icon
+			font-size: 16px
+			transition: $trs
+	&__body
+		background-color: $white
+		padding: 40px
+	&__title
+		font-size: 18px
+		line-height: 44px
+
+// Form group styles
+.form-group
+	display: flex
+	flex: 1
+	flex-direction: column
+	align-items: flex-start
+	&__label
+		color: $label-text-color
+		font-size: 12px
+		letter-spacing: 0.65px
+		text-transform: uppercase
+		margin-bottom: 10px
+		position: relative
+	& > *
+		&:not(:last-child)
+			margin-right: 20px
+.form-group
+	&.form-group--reqiured
+		.form-group
+			&__label
+				&:after
+					content: '*'
+					color: $warning-color
+					position: absolute
+					right: -10px
+					top: -10px
+					font-size: 20px
+	&.form-group
+		&--width
+			&-m
+				max-width: 245px
+// File upload styles
+.file-upload
+	display: flex
+	align-items: center
+	cursor: pointer
+	input[type="file"]  
+		display: none
+	&__custom
+		color: #1fa349
+		display: flex
+		font-size: 14px
+		font-weight: 700
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+	&__icon
+		+dem(12px, 16px)
+		fill: #1fa349
+
+.btn
+	&.btn
+		&--size
+			&-s
+				padding: 3px 15px
+			&-l
+				padding: 15px 30px
+.form
+	&-line
+		display: flex
+		align-items: center
+		& > *
+			&:not(:last-child)
+				margin-right: 20px
+		&__info
+			font-size: 12px
+			&.form-line__info
+				&--color
+					&-green
+						color: #1fa349
+	&-info
+		font-size: 12px
+		color: $placeholder-color
+		&__link
+			color: $placeholder-color
+			text-decoration: underline
+.mfp-bg
+	background-color: $base-text-color
+	opacity: 0.3
+.textarea-field
+	background-color: $white
+	border: 1px solid $input-border-color
+	border-radius: 4px
+	box-shadow: none
+	height: 100px
+	width: 100%
+	padding: 10px 15px
+	+placeholder
+		color: $placeholder-color
+
+		
