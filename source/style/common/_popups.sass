@@ -47,6 +47,11 @@
 	&__title
 		font-size: 18px
 		line-height: 44px
+	&__subtitle
+			display: block
+			font-size: 18px
+			margin-bottom: 20px
+			line-height: 1.44
 
 // Form group styles
 .form-group
@@ -80,6 +85,9 @@
 			&-m
 				max-width: 245px
 				flex: 0 0 245px
+			&-l
+				max-width: 280px
+				flex: 0 0 280px
 .form-line__info--size-s
 	font-size: 12px
 // File upload styles
@@ -107,7 +115,7 @@
 			&-s
 				padding: 3px 15px
 			&-l
-				padding: 15px 30px
+				padding: 13px 30px
 .form
 	&-line
 		display: flex
@@ -199,10 +207,83 @@
 		&__text
 			&.form-success__text--little
 				font-size: 14px
-		&__label
-			display: block
-			font-size: 18px
-			margin-bottom: 20px
 .link-code
 	font-size: 12px
 	color: $base-text-color
+
+// Fast review
+.fast-review-form
+	background-color: $light-bg
+	padding: 20px 40px 30px
+.review-line
+	left: 1px
+	position: absolute
+	z-index: 1
+	width: 0
+	top: 30px
+	height: 5px
+	transition: $trs
+	background-color: $action-color
+	&__wrapper
+		position: relative
+		padding: 30px 0
+		margin: 0 10px
+	&__inner
+		background-color: $input-border-color
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		height: 5px
+	&__item
+		border-left: 1px solid #dedede
+		height: 20px
+		display: block
+		margin-bottom: -5px
+		position: relative
+		&.review-line__item
+			&--active
+				.review-line__number
+					background-color: $action-color
+			&--descr
+				&-right
+					&:before
+						left: auto
+						right: 0
+				&-center
+					&:before
+						left: -50%
+						transform: translateX(-50%)
+		&:before
+			content: attr(data-fast-review)
+			display: block
+			color: $placeholder-color
+			font-size: 12px
+			position: absolute
+			left: 0
+			top: -20px
+			white-space: nowrap
+	&__number
+		cursor: pointer
+		border-radius: 50%
+		position: absolute
+		top: 100%
+		left: -12px
+		+dem(24px)
+		line-height: 24px 
+		text-align: center
+		transition: $trs
+		&:hover
+			background-color: $white
+.fast-review-form
+	& > *
+		margin: 20px 0
+		&:first-chiild
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+	&__line
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 10px 
+	

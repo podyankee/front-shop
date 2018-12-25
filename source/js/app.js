@@ -107,6 +107,15 @@ var productPrevSlider = function () {
 		});
 	};
 
+	var reviewLine = function () {
+		$(document).on('click', '.review-line__number', function () {
+			var left = $(this).parent().position().left;
+			$(this).parent().siblings().removeClass('review-line__item--active');
+			$(this).parent().addClass('review-line__item--active');
+			$('.review-line').css('width', left - 1);
+		});
+	};
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
@@ -114,6 +123,7 @@ var productPrevSlider = function () {
 	locationChoose();
 	popupLink();
 	formValidate();
+	reviewLine();
 
 	});
 	
