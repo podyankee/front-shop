@@ -19,7 +19,7 @@ module.exports = function () {
 			.pipe(plumber())
 			.pipe(sourcemaps.init())
 			.pipe($.gp.sass())
-			.pipe(gcmq())
+			//.pipe(gcmq())
 			.pipe($.gp.autoprefixer({ browsers: $.config.autoprefixerConfig }))
 			.pipe(sourcemaps.write())
 			.pipe(rename('app.min.css'))
