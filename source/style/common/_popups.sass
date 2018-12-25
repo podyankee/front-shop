@@ -79,6 +79,9 @@
 		&--width
 			&-m
 				max-width: 245px
+				flex: 0 0 245px
+.form-line__info--size-s
+	font-size: 12px
 // File upload styles
 .file-upload
 	display: flex
@@ -137,5 +140,69 @@
 	padding: 10px 15px
 	+placeholder
 		color: $placeholder-color
+	&.error
+		+placeholder
+			color: $warning-color
+		border-color: $warning-color
 
-		
+// Form success
+.show-on-success
+	display: none
+	.popup__body
+		padding: 0
+.form
+	&-success
+		background-color: $light-bg
+		& > *
+			margin: 6px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+		&__block
+			background-color: $white
+			padding: 30px 40px
+		&__row
+			display: flex
+			& > *
+				&:not(:last-child)
+					margin-right: 25px
+		&-contacts
+			position: relative
+			padding-left: 50px
+			font-size: 14px
+			display: flex
+			flex-direction: column
+			& > *
+				margin: 3px 0
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
+			&__icon
+				+dem(35px)
+				position: absolute
+				left: 0
+				top: 0
+			&__link
+				font-size: 12px
+		&__info
+			display: flex
+			align-items: center
+			font-size: 24px
+			margin-bottom: 15px
+			& > *
+				&:not(:last-child)
+					margin-right: 10px
+		&__number
+			font-weight: 700
+		&__text
+			&.form-success__text--little
+				font-size: 14px
+		&__label
+			display: block
+			font-size: 18px
+			margin-bottom: 20px
+.link-code
+	font-size: 12px
+	color: $base-text-color

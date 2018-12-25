@@ -75,12 +75,45 @@ var productPrevSlider = function () {
 		});
 	};
 
+	var formValidate = function () {
+		$('form').each(function () {
+			$(this).on('submit', function () {
+				$(this).validate({
+					rules: {
+						name: 'required',
+						phone: 'required',
+						"req-textarea": 'required',
+						password: 'required'
+					},
+					messages: {
+						name: 'Введите корректное имя',
+						phone: 'Введите корректный номер',
+						password: 'Введите корректный пароль',
+						"req-textarea": 'Заполните поле'
+					},
+					errorPlacement: function (error, element) {
+						element.attr("placeholder", error[0].outerText);
+					}
+				});
+				if ($(this).valid()) {
+					var wrap = $(this)[0].closest('.hide-on-success');
+					if (wrap) {
+						$(wrap).siblings('.show-on-success').show();
+						$(wrap).hide(); 
+					}
+				}
+				return false;
+			});
+		});
+	};
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
 	catalogNavHover();
 	locationChoose();
 	popupLink();
+	formValidate();
 
 	});
 	

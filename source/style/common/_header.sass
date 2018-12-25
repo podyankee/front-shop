@@ -186,6 +186,10 @@
 	width: 100%
 	+placeholder
 		color: $placeholder-color
+	&.error
+		border-color: $warning-color
+		+placeholder
+			color: $warning-color
 	&.input-field--size
 		&-s
 			height: 40px
