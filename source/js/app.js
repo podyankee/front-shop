@@ -116,6 +116,63 @@ var productPrevSlider = function () {
 		});
 	};
 
+	var contactsPopup = function () {
+		$(document).on('click', '.contacts-popup__toggle', function () {
+			$(this).parent().addClass('contacts-popup--active');
+		});
+		var popup = document.getElementsByClassName('contacts-popup');
+		$(document).on('click', '.contacts-popup__close', function () {
+			$(popup).removeClass('contacts-popup--active');
+		});
+	};
+
+	if($('div').is('.contacts-popup__map')) {
+		ymaps.ready(function () {
+			var myMapOffice = new ymaps.Map('contacts-popup-office', {
+				center: [51.484209, -0.175801],
+				zoom: 15
+			}, {
+					searchControlProvider: 'yandex#search'
+				}),
+
+				myPlacemark1 = new ymaps.Placemark(myMapOffice.getCenter(), {
+				}, {
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: 'assets/img/map-dot.png',
+						// Размеры метки.
+						iconImageSize: [32, 32]
+					});
+
+			myMapOffice.geoObjects
+				.add(myPlacemark1);
+			myMapOffice.behaviors.disable('scrollZoom');
+			myMapOffice.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('foolscreenControl').remove('geolocationControl').remove('rulerControl');
+			
+			var myMapStock = new ymaps.Map('contacts-popup-stock', {
+				center: [52.480475, -1.896182],
+				zoom: 15
+			}, {
+					searchControlProvider: 'yandex#search'
+				}),
+
+				myPlacemark2 = new ymaps.Placemark(myMapStock.getCenter(), {
+				}, {
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: 'assets/img/map-dot.png',
+						// Размеры метки.
+						iconImageSize: [32, 32]
+					});
+
+			myMapStock.geoObjects
+				.add(myPlacemark2);
+			myMapStock.behaviors.disable('scrollZoom');
+			myMapStock.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('foolscreenControl').remove('geolocationControl').remove('rulerControl');
+
+		});
+	}
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
@@ -124,7 +181,7 @@ var productPrevSlider = function () {
 	popupLink();
 	formValidate();
 	reviewLine();
-
+	contactsPopup();
 	});
 	
 var popularCategoriesSlider = function () {

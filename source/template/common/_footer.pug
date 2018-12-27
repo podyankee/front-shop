@@ -55,15 +55,42 @@ footer.footer
 							+icon('location', 'footer-contacts__icon')
 							span.footer-contacts__title Офис
 							p.footer-contacts__text 111011, London, Queeen Mary str., 11 - 9
-								a(href="#").footer-contacts__link на карте
+								.contacts-popup
+									span.contacts-popup__toggle на карте
+									.contacts-popup__body
+										.contacts-popup__map#contacts-popup-office
+										.contacts-popup__info
+											.contacts-popup__close
+												.icon.contacts-popup__close-icon &times;
+											span.contacts-popup__title Центральный офис в Лондоне
+											span.contacts-popup__text 111011, London, Queeen Mary str., 11 - 9
+											.contacts-popup__block
+												span.contacts-popup__label Время работы:
+												span.contacts-popup__text пн-пт 9:00-18:00
+											.contacts-popup__qr
+												span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR код
+												img(src="assets/img/wiki.png", alt="alt").contacts-popup__qr-image
 					.footer__block
 						.footer-contacts
 							+icon('location', 'footer-contacts__icon')
 							span.footer-contacts__title Производство и склад
 							p.footer-contacts__text 111011, Birmingham, Locksmith str., 10 - 7
-								a(href="#").footer-contacts__link на карте
-
-	.footer-bottom
+								.contacts-popup
+									span.contacts-popup__toggle на карте
+									.contacts-popup__body
+											.contacts-popup__map#contacts-popup-stock
+											.contacts-popup__info
+												.contacts-popup__close
+													.icon.contacts-popup__close-icon &times;
+												span.contacts-popup__title Производство и склад
+												span.contacts-popup__text 111011, Birmingham, Locksmith str., 10 - 7
+												.contacts-popup__block
+													span.contacts-popup__label Время работы:
+													span.contacts-popup__text пн-пт 9:00-18:00
+												.contacts-popup__qr
+													span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR код
+													img(src="assets/img/wiki.png", alt="alt").contacts-popup__qr-image
+		.footer-bottom
 		.container
 			.footer-bottom__line
 				span.copyright &copy; 2018 Завод «Glastonberry»
