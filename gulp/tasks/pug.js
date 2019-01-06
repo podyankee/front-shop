@@ -17,7 +17,7 @@ module.exports = function() {
           message:  error.message
         }
        }))
-      .pipe($.gulp.dest($.config.root));
+			.pipe($.gulp.dest($.config.root));
   });
   $.gulp.task('pug:build', function() {
     //var locals = require('../../content.json');
@@ -35,6 +35,6 @@ module.exports = function() {
           message:  error.message
         }
        }))
-      .pipe($.gulp.dest($.config.root));
+			.pipe($.gulp.dest($.config.root));
   });
 };

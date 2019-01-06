@@ -3,7 +3,7 @@ include common/_mixins
 block variables
 
 doctype html
-html(lang="en")
+html(lang="ru")
 	head
 		meta(charset="utf-8")
 		title #{title}
@@ -30,5 +30,6 @@ html(lang="en")
 	body.index-page
 		block content
 		script(src='assets/js/vendor.min.js')
+		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" )
 		script(src='assets/js/app.min.js')
 		block script

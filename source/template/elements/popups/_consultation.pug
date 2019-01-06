@@ -10,14 +10,14 @@
 					.form-line
 						.form-group.form-group--width-m.form-group--reqiured
 							label.form-group__label Контактный телефон
-							input(type="phone", placeholder="+8(800)123-45-54", name="phone").input-field
+							input(type="tel", placeholder="+8(800)123-45-54", name="phone").input-field
 					.form-line
 						.form-group
 							label.form-group__label Вопрос или комментарий
 							textarea(placeholder="Здравствуйте, меня интересует...").textarea-field
 					.form-line
 						.form-group
-							label.file-upload
+							.file-upload
 								input(type="file")
 								.file-upload__custom
 									+icon('file', 'file-upload__icon')

@@ -157,3 +157,24 @@ audio, canvas, iframe, img, svg, video, textarea
 .header__item--mobile-hide
 .header__top
 	+md(display,none)
+
+.slick-dots
+	display: flex
+	align-items: center
+	justify-content: center
+	& > *
+		&:not(:last-child)
+			margin-right: 10px
+	.slick-active
+		button
+			background-color: $action-color
+	button
+		background-color: $slider-dot-bg
+		text-indent: -9999px
+		display: block
+		+dem(10px)
+		padding: 0
+		border: 0
+		border-radius: 2px
+		outline: 0
+		cursor: pointer

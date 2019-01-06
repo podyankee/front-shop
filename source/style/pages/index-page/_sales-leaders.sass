@@ -15,25 +15,32 @@
 	padding: 20px
 	transition: $trs
 	width: 100%
+	+xl(height, 190px)
 	&:hover
 		border-color: $action-color
 	&--big
 		height: 400px
+		+xl(height, 270px)
 		.sales-leader__img
 			height: 280px
+			+xl(height,160px)
 			img
 				max-height: 280px
+				+xl(max-height, 160px)
 		.sales-leader__name
 			font-size: 22px
+			+xl(font-size,16px)
 	&__img
 		height: 140px
 		margin-bottom: 10px
 		display: flex
 		align-items: center
 		justify-content: center
+		+xl(height,80px)
 		img
 			max-width: 100%
 			max-height: 140px
+			+xl(max-height, 80px)
 	&__name
 		font-weight: 700
 		color: $base-text-color

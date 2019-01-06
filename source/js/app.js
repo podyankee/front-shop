@@ -45,7 +45,17 @@ var productPrevSlider = function () {
 		slidesToScroll: 1,
 		prevArrow: '.slider-nav--prev',
 		nextArrow: '.slider-nav--next',
-		infinite: false
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1239,
+				settings: {
+					slidesToShow: 3, 
+					arrow: false,
+					dots: true
+				}
+			}
+		]
 	});
 };
 
@@ -126,52 +136,52 @@ var productPrevSlider = function () {
 		});
 	};
 
-	if($('div').is('.contacts-popup__map')) {
-		ymaps.ready(function () {
-			var myMapOffice = new ymaps.Map('contacts-popup-office', {
-				center: [51.484209, -0.175801],
-				zoom: 15
-			}, {
-					searchControlProvider: 'yandex#search'
-				}),
+	// if($('div').is('.contacts-popup__map')) {
+	// 	ymaps.ready(function () {
+	// 		var myMapOffice = new ymaps.Map('contacts-popup-office', {
+	// 			center: [51.484209, -0.175801],
+	// 			zoom: 15
+	// 		}, {
+	// 				searchControlProvider: 'yandex#search'
+	// 			}),
 
-				myPlacemark1 = new ymaps.Placemark(myMapOffice.getCenter(), {
-				}, {
-						iconLayout: 'default#image',
-						// Своё изображение иконки метки.
-						iconImageHref: 'assets/img/map-dot.png',
-						// Размеры метки.
-						iconImageSize: [32, 32]
-					});
+	// 			myPlacemark1 = new ymaps.Placemark(myMapOffice.getCenter(), {
+	// 			}, {
+	// 					iconLayout: 'default#image',
+	// 					// Своё изображение иконки метки.
+	// 					iconImageHref: 'assets/img/map-dot.png',
+	// 					// Размеры метки.
+	// 					iconImageSize: [32, 32]
+	// 				});
 
-			myMapOffice.geoObjects
-				.add(myPlacemark1);
-			myMapOffice.behaviors.disable('scrollZoom');
-			myMapOffice.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('foolscreenControl').remove('geolocationControl').remove('rulerControl');
+	// 		myMapOffice.geoObjects
+	// 			.add(myPlacemark1);
+	// 		myMapOffice.behaviors.disable('scrollZoom');
+	// 		myMapOffice.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('foolscreenControl').remove('geolocationControl').remove('rulerControl');
 			
-			var myMapStock = new ymaps.Map('contacts-popup-stock', {
-				center: [52.480475, -1.896182],
-				zoom: 15
-			}, {
-					searchControlProvider: 'yandex#search'
-				}),
+	// 		var myMapStock = new ymaps.Map('contacts-popup-stock', {
+	// 			center: [52.480475, -1.896182],
+	// 			zoom: 15
+	// 		}, {
+	// 				searchControlProvider: 'yandex#search'
+	// 			}),
 
-				myPlacemark2 = new ymaps.Placemark(myMapStock.getCenter(), {
-				}, {
-						iconLayout: 'default#image',
-						// Своё изображение иконки метки.
-						iconImageHref: 'assets/img/map-dot.png',
-						// Размеры метки.
-						iconImageSize: [32, 32]
-					});
+	// 			myPlacemark2 = new ymaps.Placemark(myMapStock.getCenter(), {
+	// 			}, {
+	// 					iconLayout: 'default#image',
+	// 					// Своё изображение иконки метки.
+	// 					iconImageHref: 'assets/img/map-dot.png',
+	// 					// Размеры метки.
+	// 					iconImageSize: [32, 32]
+	// 				});
 
-			myMapStock.geoObjects
-				.add(myPlacemark2);
-			myMapStock.behaviors.disable('scrollZoom');
-			myMapStock.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('foolscreenControl').remove('geolocationControl').remove('rulerControl');
+	// 		myMapStock.geoObjects
+	// 			.add(myPlacemark2);
+	// 		myMapStock.behaviors.disable('scrollZoom');
+	// 		myMapStock.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('foolscreenControl').remove('geolocationControl').remove('rulerControl');
 
-		});
-	}
+	// 	});
+	// }
 
 	sandwich();
 	popularCategoriesSlider();
