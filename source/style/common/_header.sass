@@ -27,6 +27,7 @@
 		overflow: hidden
 		text-overflow: ellipsis
 		white-space: nowrap
+		+lg(display, inline-block)
 		&:after
 			position: absolute
 			z-index: 1
@@ -52,9 +53,21 @@
 		top: calc(100% + 10px)
 		+xl-block
 			max-width: 728px
+		+lg-block
+			max-width: 100%
+			border: 2px solid $action-color
+			position: fixed
+			top: auto
+			bottom: 0
+			right: 0
+			padding: 10px 20px 20px
+			flex-direction: column
 		& > *
 			&:not(:last-child)
 				margin-right: 15px
+				+lg-block
+					margin-right: 0
+					margin-bottom: 10px
 		&:after
 			content: ''
 			border-style: solid
@@ -65,6 +78,7 @@
 			left: 35px
 			top: -9px
 			width: 0
+			+lg(display, none)
 		&__buttons
 			display: flex
 			align-items: center
@@ -92,6 +106,30 @@
 		width: 210px
 		transition: $trs
 		opacity: 0
+		flex-direction: column
+		+lg-block
+			top: 60px
+			right: 20px
+			bottom: 60px
+			width: auto
+		&__body
+			+lg(max-height, 100%)
+		&__close
+			display: none
+			+dem(35px)
+			align-items: center
+			cursor: pointer
+			justify-content: center
+			position: absolute
+			z-index: 1
+			right: 0
+			top: -30px
+			+lg-block
+				display: flex
+			&-icon
+				font-size: 30px
+				font-weight: 700
+				color: $action-color
 		&__header
 			border-bottom: 2px solid $action-color
 		&__list
@@ -146,6 +184,8 @@
 		padding: 12px 0
 		display: flex
 		align-items: center
+		+lg-block
+			display: none
 		&__user-nav
 			margin-left: auto
 	&__location
@@ -154,6 +194,8 @@
 	&-main
 		background-color: $dark-bg-color
 		padding: 20px 0
+		+lg-block
+			padding: 13px 0
 		color: $white
 		.container
 			display: flex
@@ -172,6 +214,7 @@
 	font-size: 12px
 	display: flex
 	flex-direction: column
+	+lg(display, none)
 	&__img	
 		width: 151px
 		height: auto
@@ -184,6 +227,22 @@
 		& > *
 			&:not(:last-child)
 				margin-right: 10px
+		.sandwich
+			+lg(display, none)
+	&__title
+		+lg(display,none)
+		&--mobile
+			display: none
+			padding-right: 20px
+			position: relative
+			z-index: 3
+			+lg(display, block)
+			&:after
+				content: ''
+				+arr(10, 5, $white, b)
+				position: absolute
+				right: 0
+				top: 5px
 .input-field
 	background-color: $white
 	border-radius: 4px
@@ -223,6 +282,7 @@
 .order-callback
 	display: flex
 	flex-direction: column
+	+lg(display, none)
 	&__phone
 		color: $action-color
 		font-size: 24px
@@ -237,6 +297,7 @@
 	&__description
 		font-size: 12px
 .basket-prev
+	color: $white
 	display: flex
 	flex-direction: column
 	position: relative
@@ -267,21 +328,25 @@
 		top: -12px
 		color: $base-text-color
 		+xl(display,block)
+		+lg-block
+			+dem(16px)
+			font-size: 10px
+			top: -8px
+			right: -8px
+			line-height: 16px 
 .header__basket-prev
 	margin-left: auto
 
 .header-main
-	&__logo
-		+xl(order, 1)
 	&__catalog-nav
 		+xl(order, 2)
 	&__search
-		+xl(order, 3)
+		+xl(order, 1)
 	&__order-callback
-		+xl(order, 5)
+		+xl(order, 3)
 		+xl(margin-left,auto)
 .header__basket-prev
-	+xl(order, 4)
+	+xl(order, 2)
 	+xl(margin-left,0)
 	+xl(margin-right,30px)
 // Catalog nav
@@ -309,7 +374,7 @@
 			+arr(20, 10, $white, t)
 			position: absolute
 			left: 183px
-			top: -10px
+			top: -9px
 	&__label
 		display: flex
 		align-items: center
@@ -395,5 +460,93 @@
 .location
 	&__body
 		&.is-location-choose
+			+lg-block
+				position: fixed
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: rgba(#003333, 0.3)
+				z-index: 3
+	
 			.location-choose
 				opacity: 1
+				display: flex
+	&-mobile
+		color: $link-color
+		display: flex
+		align-items: center
+		.icon-location
+			fill: $link-color
+		.location__current
+			&:after
+				display: none
+.header
+	&-actions
+		display: flex
+		align-items: center
+		+xl-block
+			order: 3
+		+lg-block
+			margin-left: auto
+		& > *
+				&:not(:last-child)
+					margin-right: 30px
+					+lg(margin-right, 15px)
+
+
+.mobile-nav
+	&__wrapper
+		display: none
+		&.mobile-nav__wrapper--active
+			.mobile-nav__content
+				left: 0
+		+lg-block
+			display: block
+	&__content
+		position: fixed
+		left: -100%
+		bottom: 0
+		top: 50px
+		width: 100%
+		transition: $trs
+		background-color: $white
+		z-index: 3
+		display: flex
+		flex-direction: column
+		.location-choose__list
+			color: $base-text-color
+	&__main
+		flex: 1
+		overflow: auto
+		padding: 20px
+	&__callback
+		background-color: $dark-bg-color
+		padding: 20px
+		color: $white
+		margin-top: auto
+	&__list
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+	&__link
+		display: block
+		font-size: 16px
+		line-height: 1.63
+		color: $base-text-color
+.mobile-nav__order-callback
+	+lg-block
+		display: flex
+		flex-direction: column
+.mobile-user-nav
+	&__list
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+	&__link
+		display: block
+		font-size: 16px
+		line-height: 1.63
+

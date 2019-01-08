@@ -7,15 +7,74 @@ header.header
 				a(href="#").user-nav__link Войти
 	.header-main
 		.container
+			.mobile-nav__wrapper
+				.sandwich
+					.sandwich__line.sandwich__line--top
+					.sandwich__line.sandwich__line--middle
+					.sandwich__line.sandwich__line--bottom
+				.mobile-nav__content
+					.mobile-nav__main
+						ul.mobile-nav__list
+							li.mobile-nav__item
+								a(href="#").mobile-nav__link Оплата и доставка
+							li.mobile-nav__item
+								a(href="#").mobile-nav__link Гарантия
+							li.mobile-nav__item
+								a(href="#").mobile-nav__link Услуги
+							li.mobile-nav__item
+								a(href="#").mobile-nav__link Компания
+							li.mobile-nav__item
+								a(href="#").mobile-nav__link Контакты
+						ul.mobile-user-nav__list
+							li.mobile-user-nav__item
+								a(href="#").mobile-user-nav__link Войти 
+						.location-mobile
+							+icon('location')
+							span.location__current Оксфорд
+						.location__body
+							.location-question
+								span.location-question__text Ваш регион доставки Манчестер?
+								.location-question__buttons
+									.btn.btn--bg-green.btn--size-s.location-question__btn(data-location="yes") Да, верно
+									.btn.btn--border-green.btn--size-s.location-question__btn(data-location="no") Нет, уточнить регион
+							.location-choose
+								.location-choose__close
+									.icon.icon__close.location-choose__close-icon &times;
+								.location-choose__header
+									input(type="text", placeholder="Поиск по городу или индексу").input-field.input-field--size-s
+								.location-choose__body
+									ul.location-choose__list
+										li.location-choose__item Лондон
+										li.location-choose__item Бирмингем
+										li.location-choose__item Бристоль
+										li.location-choose__item Манчестер
+										li.location-choose__item Оксфорд
+										li.location-choose__item Ливерпуль
+										li.location-choose__item Лидс
+										li.location-choose__item Кембридж
+										li.location-choose__item Лондон
+										li.location-choose__item Бирмингем
+										li.location-choose__item Бристоль
+										li.location-choose__item Манчестер
+										li.location-choose__item Оксфорд
+										li.location-choose__item Ливерпуль
+										li.location-choose__item Лидс
+										li.location-choose__item Кембридж
+					.mobile-nav__callback
+						.order-callback.mobile-nav__order-callback
+							span.order-callback__description Звоните круглосуточно
+							a(href="tel:88003348888").order-callback__phone 8 800 334-88-88
+							a(href="#").order-callback__link Заказать звонок
 			.logo.header-main__logo
 				img(src="assets/img/logo.png", alt="logo").logo__img
 				span.logo__text Продажа стройматериалов
 			include ../elements/header/_catalog-nav
-			.search.header-main__search
-				input(placeholder="Артикул  или название товара").input-field.input-field--size-s
-				+icon("search", "search__icon")
-			.order-callback.header-main__order-callback
-				span.order-callback__description Звоните круглосуточно
-				a(href="tel:88003348888").order-callback__phone 8 800 334-88-88
-				a(href="#").order-callback__link Заказать звонок
-			include ../elements/header/_basket-prev
+			.header-actions
+				.search.header-main__search
+					input(placeholder="Артикул  или название товара").input-field.input-field--size-s
+					+icon("search", "search__icon")
+				.order-callback.header-main__order-callback
+					span.order-callback__description Звоните круглосуточно
+					a(href="tel:88003348888").order-callback__phone 8 800 334-88-88
+					a(href="#").order-callback__link Заказать звонок
+				include ../elements/header/_basket-prev

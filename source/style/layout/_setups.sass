@@ -9,6 +9,8 @@ body
 	-webkit-font-smoothing: antialiased
 	color: $base-text-color
 	height: 100%
+	&.fixed
+		overflow: hidden
 
 .debug
 	+debug(rgba(255, 192, 203, 0.5), 1px solid yellow)
@@ -49,6 +51,7 @@ audio, canvas, iframe, img, svg, video, textarea
 	height: 14px
 	position: relative
 	width: 23px
+	z-index: 3
 	&--active
 		.sandwich__line
 			&--top
@@ -178,3 +181,6 @@ audio, canvas, iframe, img, svg, video, textarea
 		border-radius: 2px
 		outline: 0
 		cursor: pointer
+
+.icon-location
+	+dem(16px)
