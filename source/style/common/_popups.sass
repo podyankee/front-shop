@@ -20,11 +20,15 @@
 	position: relative
 	max-width: 520px
 	margin: 50px auto
+	+lg-block
+		margin: 50px 15px
 	&__header
 		display: flex
 		align-items: center
 		background-color: $light-bg
 		padding: 15px 25px 15px 40px
+		+lg-block
+			padding: 10px 20px
 	&__close
 		display: flex
 		align-items: center
@@ -33,6 +37,12 @@
 		margin-left: auto
 		cursor: pointer
 		opacity: 0.2
+		+lg(opacity,1)
+		+lg-block
+			margin-left: 0
+			position: absolute
+			right: 0
+			top: -30px
 		&:hover
 			opacity: 0.7
 			.popup__close-icon
@@ -41,9 +51,14 @@
 		&-icon
 			font-size: 16px
 			transition: $trs
+			+lg-block
+				font-size: 30px
+				color: $action-color
 	&__body
 		background-color: $white
 		padding: 40px
+		+lg-block
+			padding: 30px 20px
 	&__title
 		font-size: 18px
 		line-height: 44px
@@ -83,11 +98,18 @@
 	&.form-group
 		&--width
 			&-m
-				max-width: 245px
-				flex: 0 0 245px
+				max-width: 240px
+				flex: 0 0 240px
+				+lg-block
+					flex: 1
+					max-width: 100%
 			&-l
 				max-width: 280px
 				flex: 0 0 280px
+				+lg-block
+					flex: 1
+					max-width: 100%
+				
 .form-line__info--size-s
 	font-size: 12px
 // File upload styles
@@ -125,6 +147,8 @@
 				margin-right: 20px
 		&__info
 			font-size: 12px
+			+lg-block
+				display: none
 			&.form-line__info
 				&--color
 					&-green
@@ -170,11 +194,18 @@
 		&__block
 			background-color: $white
 			padding: 30px 40px
+			+lg-block
+				padding: 30px 20px
 		&__row
 			display: flex
+			+lg-block
+				flex-direction: column
 			& > *
 				&:not(:last-child)
 					margin-right: 25px
+					+lg-block
+						margin-right: 0
+						margin-bottom: 15px
 		&-contacts
 			position: relative
 			padding-left: 50px
@@ -199,6 +230,8 @@
 			align-items: center
 			font-size: 24px
 			margin-bottom: 15px
+			+lg-block
+				font-size: 18px
 			& > *
 				&:not(:last-child)
 					margin-right: 10px
@@ -215,6 +248,8 @@
 .fast-review-form
 	background-color: $light-bg
 	padding: 20px 40px 30px
+	+lg-block
+		padding: 20px
 .review-line
 	left: 1px
 	position: absolute
@@ -262,6 +297,8 @@
 			left: 0
 			top: -20px
 			white-space: nowrap
+			+lg-block
+				display: none
 	&__number
 		cursor: pointer
 		border-radius: 50%
@@ -283,7 +320,12 @@
 			margin-bottom: 0
 	&__line
 		display: flex
+		+lg-block
+			flex-direction: column
 		& > *
 			&:not(:last-child)
-				margin-right: 10px 
+				margin-right: 10px
+				+lg-block
+					margin-right: 0
+					margin-bottom: 10px
 	

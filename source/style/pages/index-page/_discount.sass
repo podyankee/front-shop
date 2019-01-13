@@ -53,6 +53,10 @@
 	&__footer
 		transition: $trs
 		opacity: 0
+		+lg-block
+			opacity: 1
+			.btn
+				width: auto
 	&__info
 		display: flex
 		align-items: flex-end
@@ -84,10 +88,16 @@
 			color: $base-text-color
 .products-prev
 	+row-flex
+	+lg-block
+		& > *
+			&:not(:last-child)
+				margin-bottom: 20px
 .product-prev
 	+col
 	+size(3)
 	+xl-block
 		+size(4)
+	+lg-block
+		+size(12)
 	&:nth-child(4)
 		+xl(display, none)

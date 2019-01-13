@@ -1,13 +1,23 @@
 .advantages
 	+row-flex
+	position: relative
+	z-index: 3
 	&__wrapper
 		background-color: $white
+	+lg-block
+		& > *
+			margin-bottom: 30px
+		padding-top: 30px
 .advantage
 	+col
 	+size(4)
 	display: flex
 	padding-top: 50px
 	padding-bottom: 50px
+	+lg-block
+		+size(12)
+		padding: 0
+		padding-left: 30px
 	& > *
 		&:not(:last-child)
 			margin-right: 15px

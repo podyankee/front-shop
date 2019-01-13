@@ -6,6 +6,8 @@
 	&__col
 		+col
 		+size(6)
+		+lg-block
+			+size(12)
 .sales-leader
 	background-color: $white
 	border: 2px solid transparent
@@ -16,14 +18,22 @@
 	transition: $trs
 	width: 100%
 	+xl(height, 190px)
+	+lg(height,auto)
+	+lg(display,flex)
 	&:hover
 		border-color: $action-color
 	&--big
 		height: 400px
 		+xl(height, 270px)
+		+lg-block
+			height: auto
+			display: block
 		.sales-leader__img
 			height: 280px
 			+xl(height,160px)
+			+lg-block
+				flex: 1
+				width: 100%
 			img
 				max-height: 280px
 				+xl(max-height, 160px)
@@ -37,6 +47,9 @@
 		align-items: center
 		justify-content: center
 		+xl(height,80px)
+		+lg-block
+			flex: 0 0 40%
+			width: 40%
 		img
 			max-width: 100%
 			max-height: 140px

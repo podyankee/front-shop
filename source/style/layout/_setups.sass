@@ -19,6 +19,7 @@ body
 section
 	position: relative
 	padding: 40px 0
+	z-index: 10
 
 
 ul, li
@@ -87,6 +88,7 @@ audio, canvas, iframe, img, svg, video, textarea
 	align-items: center
 	&__right
 		margin-left: auto
+		+lg(display, none)
 	&__link
 		color: $link-color
 		font-weight: 600
@@ -104,6 +106,10 @@ audio, canvas, iframe, img, svg, video, textarea
 	transition: $trs	
 	border: 2px solid transparent
 	white-space: nowrap
+	+lg-block
+		overflow: hidden
+		text-overflow: ellipsis
+		display: inline-block
 	&:hover
 		background-color: #f0de01
 	& > *
@@ -136,9 +142,12 @@ audio, canvas, iframe, img, svg, video, textarea
 	&-bg-white
 		background-color: $white
 	&-sales-leaders
-		margin-bottom: 20px2
+		margin-bottom: 20px
 	&-size-small
 		padding: 10px 0
+	&-questions
+		position: relative
+		z-index: 3
 .link
 	&-white
 		color: $white

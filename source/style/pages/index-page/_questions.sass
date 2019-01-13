@@ -19,6 +19,14 @@
 	display: flex
 	align-items: center
 	justify-content: space-between
+	+lg(flex-direction,column)
+	& > *
+		+lg-block
+			margin: 10px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
 .ask-your-question
 	display: flex
 	align-items: center

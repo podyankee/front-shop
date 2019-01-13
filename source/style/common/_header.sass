@@ -94,6 +94,7 @@
 				display: block
 				overflow: hidden
 				text-overflow: ellipsis
+			+xl(white-space, normal)
 	&-choose
 		box-shadow: 0 9 30px 0 rgba(0, 0, 0, 0.2)
 		border: 2px solid $action-color
@@ -342,6 +343,8 @@
 		+xl(order, 2)
 	&__search
 		+xl(order, 1)
+	&__header-mobile-phone
+		+lg(order, 2)
 	&__order-callback
 		+xl(order, 3)
 		+xl(margin-left,auto)
@@ -349,6 +352,7 @@
 	+xl(order, 2)
 	+xl(margin-left,0)
 	+xl(margin-right,30px)
+	+lg(order, 3)
 // Catalog nav
 
 .catalog-nav
@@ -369,12 +373,24 @@
 		+xl-block
 			left: 20px
 			max-width: 728px
+		+lg-block
+			left: 0
+			position: fixed
+			top: 50px
+			bottom: 0
+			width: 100%
+			max-width: 100%
+			border: 1px solid $action-color
+			border-radius: 0
+			overflow: auto
 		&:before
 			content: ''
 			+arr(20, 10, $white, t)
 			position: absolute
 			left: 183px
 			top: -9px
+			+xl(left, 220px)
+			+lg(display, none)
 	&__label
 		display: flex
 		align-items: center
@@ -382,6 +398,8 @@
 		transition: $trs
 		cursor: pointer
 		position: relative
+		+lg-block
+			border-bottom: 1px solid rgba(159, 197, 178, 0.5)
 		& > *
 			&:not(:last-child)
 				margin-right: 5px
@@ -393,29 +411,43 @@
 			position: absolute
 			top: 10px
 			right: 20px
+			+lg-block
+				transform: rotate(90deg)
 		&-text
 			font-weight: 600
 			font-size: 14px
 			line-height: 18px
+			+lg-block
+				font-size: 16px
+				line-height: 1.63
 	&__list
 		width: 255px
 		position: relative
+		+lg(width, 100%)
 		& > *
 			&:not(:last-child)
 				margin-right: 10px
+				+lg(margin-right, 0)
 
 // Catalog-subnav
 .catalog-nav
 	&__item
+		+lg(background-color, $action-color)
 		&:first-child
 			border-radius: 4px 4px 0 0
 			overflow: hidden
+			+lg(border-radius, 0)
 		&:last-child
 			border-radius: 0 0 4px 4px
 			overflow: hidden
+			+lg(border-radius, 0)
 		&:hover
 			.catalog-subnav
-				display: block
+				+from($break-lg)
+					display: block
+		&.catalog-nav__item--active
+			.catalog-subnav
+				+lg(display, block)
 
 .catalog-subnav
 	position: absolute
@@ -426,25 +458,51 @@
 	border-left: 1px solid $action-color
 	border-radius: 0 4px 4px 0
 	width: 670px
-	padding-top: 15px
-	padding-bottom: 0
+	padding: 15px 29px 0
 	display: none
 	+xl-block
 		width: 473px
+	+lg-block
+		position: static
+		width: 100%
+		padding: 0
 	.simplebar-vertical
 		margin: 10px 10px 10px 0
+		+lg-block
+			margin: 0
 	&__inner
 		+row-flex
+		+lg(display, block)
 	&__col
 		+col
 		+size(6)
+		+lg(margin, 0)
+		+lg-block
+		width: 100%
 	&__header
 		margin-bottom: 10px
+		&:after
+			+lg-block
+				content: ''
+				+arr(5, 10, $base-text-color, r)
+				position: absolute
+				top: 10px
+				right: 20px
+				transform-rotate: 90deg 
+		+lg-block
+			border-bottom: 1px solid $action-color
+			padding: 5px 40px 5px 15px
+			margin-bottom: 0
+			position: relative
 	&__title
 		font-weight: 600
 		font-size: 18px
 		line-height: 26px
+		+lg-block
+			font-size: 14px
+			line-height: 1.86
 	&__list
+		+lg(display, none)
 		& > *
 			margin: 10px 0
 			&:first-child
@@ -455,8 +513,17 @@
 		font-weight: 400
 		font-size: 14px
 		line-height: 18px
+		+lg-block
+			border-bottom: 1px solid $action-color
+			line-height: 1.86
+			padding: 5px 15px
 	&__link
 		color: $base-text-color
+	&__block
+		&.catalog-subnav__block--active
+			+lg-block
+				.catalog-subnav__list
+					display: block
 .location
 	&__body
 		&.is-location-choose
@@ -493,7 +560,13 @@
 				&:not(:last-child)
 					margin-right: 30px
 					+lg(margin-right, 15px)
-
+	&-phone-mobile
+		display: none
+		+lg-block
+			display: block
+		&__icon
+			+dem(24px)
+			fill: $action-color
 
 .mobile-nav
 	&__wrapper

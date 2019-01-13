@@ -1,5 +1,7 @@
 .popular-category
 	+xl(padding, 0)
+	+lg-block
+		padding-bottom: 40px
 .category-prev
 	background-color: $white
 	border-radius: 4px
@@ -41,5 +43,14 @@
 	margin-bottom: 30px
 	+xl-block
 		+size(4)
+	+lg-block
+		margin: 0 30px
 .s-popular-categories
 	padding-bottom: 10px
+
+.categories-prev
+	position: relative
+	&__navigation
+		display: none
+		+lg-block
+			display: block

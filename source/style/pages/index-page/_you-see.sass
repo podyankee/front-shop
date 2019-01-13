@@ -7,13 +7,17 @@
 	cursor: pointer
 	+xl-block
 		display: none!important
+	+lg-block
+		display: block!important
 	&:hover
 		opacity: 1
 	&.slider-nav
 		&--prev
 			left: -55px
+			+lg(left, -15px)
 		&--next
 			right: -55px
+			+lg(right, -15px)
 	&__icon
 		+dem (30px)
 		fill: $base-text-color

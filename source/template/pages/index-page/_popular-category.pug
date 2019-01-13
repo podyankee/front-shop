@@ -4,6 +4,11 @@ section.popular-category
 			.section-header
 				h2.title-section Популярные категории каталога
 			.categories-prev
+				.categories-prev__navigation
+					.slider-nav.slider-nav--prev.categories-prev__btn-prev
+						+icon('chevron-left', 'slider-nav__icon')
+					.slider-nav.slider-nav--next.categories-prev__btn-next
+						+icon('chevron-right', 'slider-nav__icon')
 				.categories-prev__wrapper.js-categories-prev
 					include ../../elements/categories/_prev-1
 					include ../../elements/categories/_prev-2
