@@ -5,6 +5,7 @@ module.exports = [
   './node_modules/slick-carousel/slick/slick.min.js',
 	'./node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
 	'./node_modules/jquery-validation/dist/jquery.validate.min.js',
-	'./node_modules/simplebar/dist/simplebar.min.js'
+	'./node_modules/simplebar/dist/simplebar.min.js',
+	'./node_modules/maskedinput/dist/jquery.inputmask.bundle.js'
 ];
 

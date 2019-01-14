@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+	$('.phone-mask').inputmask({ "mask": "(999) 999-9999" });
     
 	var sandwich = function () {
 		$(document).on('click', '.catalog-nav__header', function () {
@@ -241,6 +243,16 @@ var simpleBar = function () {
 		$.each($('.catalog-subnav'), function (i, v) { new SimpleBar(v); });
 	}
 };
+
+	var fileUpload = function () {
+	$(".file-upload input[type=file]").change(function () {
+		let filename = $(this).val().replace(/.*\\/, "");
+		console.log(filename);
+		$(this).closest('.file-upload').find('.file-upload__text').html(filename);
+	});
+};
+
+
 	
 	sandwich();
 	popularCategoriesSlider();
@@ -252,6 +264,7 @@ var simpleBar = function () {
 	reviewLine();
 	contactsPopup();
 	simpleBar();
+	fileUpload();
 	});
 	
 	
@@ -269,5 +282,9 @@ var popularCategoriesSlider = function () {
 
 $(window).on('resize', function () {
 	popularCategoriesSlider();
+});
+$(window).on('load', function () {
+	$('.sk-circle').fadeOut();
+	$('.preloader__wrapper').delay(400).fadeOut("slow");
 });
 
