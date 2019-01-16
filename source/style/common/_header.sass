@@ -623,3 +623,53 @@
 		font-size: 16px
 		line-height: 1.63
 
+.catalog-mobile-nav
+	background-color: $white
+	border-radius: 4px
+	display: none
+	margin-bottom: 40px
+	+lg(display, block)
+	&__item
+		padding: 0 25px 0 15px
+		position: relative
+		border: 1px solid #dedede
+		&:after
+			content: ''
+			+arr(5, 10, $base-text-color, r)
+			position: absolute
+			top: 17px
+			right: 20px
+		&.catalog-mobile-nav__item--active
+			border-color: $action-color
+			.catalog-mobile-subnav
+				display: block
+	&__label
+		font-size: 18px
+		font-weight: 600
+		line-height: 24px
+		padding: 8px 25px 8px 15px
+		border-bottom: 2px solid #dedede
+.catalog-mobile-subnav
+	display: none
+	&__label
+		border-bottom: 1px solid #dedede
+		font-weight: 600
+		font-size: 14px
+		line-height: 24px
+		padding: 8px 25px 8px 15px
+		cursor: pointer
+		&:after
+			content: ''
+			+arr(5, 10, $base-text-color, b)
+			position: absolute
+			top: 17px
+			right: 20px
+	&__item
+		position: relative
+	&__link
+		color: $link-color
+		display: block
+		font-weight: 400
+		&.catalog-mobile-subnav__link--main
+			font-weight: 600
+	

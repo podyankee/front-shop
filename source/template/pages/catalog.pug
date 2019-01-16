@@ -2,23 +2,17 @@ extends ../_template
 
 block variables
 	- var title = 'front-shop'
-	- var pageClass = 'index-page'
+	- var pageClass = 'catalog-page'
 
 block content
 	//include ../elements/_debug
 	include ../elements/_preloader
 	include ../common/_header
-	include index-page/_banner
-	include index-page/_popular-category
-	include index-page/_advantages
-	include index-page/_promo
-	include index-page/_discount
+	include ../elements/_breadcrumbs
+	include catalog/_s-catalog
 	include index-page/_sales-leaders
 	include index-page/_you-see
 	include index-page/_questions
 	include ../common/_footer
 	include ../elements/popups/_popups
 block script
-
-	
-	

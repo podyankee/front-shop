@@ -49,7 +49,7 @@ $(document).ready(function(){
 				var catalogBody = $(this).closest('.catalog-nav__body');
 				catalogBody.css('width', 'auto');
 			}
-		)
+		);
 		} else {
 			$(document).on('click', '.catalog-nav__item', function () {
 				$(this).addClass('catalog-nav__item--active');
@@ -101,8 +101,7 @@ var productPrevSlider = function () {
 				}
 			},
 			{
-				breakpoint: 768
-				,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1, 
 					arrow: true,
@@ -246,13 +245,23 @@ var simpleBar = function () {
 
 	var fileUpload = function () {
 	$(".file-upload input[type=file]").change(function () {
-		let filename = $(this).val().replace(/.*\\/, "");
-		console.log(filename);
+		var filename = $(this).val().replace(/.*\\/, "");
 		$(this).closest('.file-upload').find('.file-upload__text').html(filename);
 	});
 };
 
+var breadcrumbsNav = function () {
+	$(document).on('click', '.breadcrumbs-nav__toggle', function () {
+		$(this).parent().toggleClass('breadcrumbs__item--show-nav');
+	});
+};
 
+var catalogMobileNav = function  () {
+	$(document).on('click', '.catalog-mobile-nav__label', function () {
+		$(this).parent().toggleClass('.catalog-nav__item--active');
+		$(this).parent().siblings().removeClass('.catalog-nav__item--active');
+	});
+};
 	
 	sandwich();
 	popularCategoriesSlider();
@@ -265,6 +274,8 @@ var simpleBar = function () {
 	contactsPopup();
 	simpleBar();
 	fileUpload();
+	breadcrumbsNav();
+	catalogMobileNav();
 	});
 	
 	

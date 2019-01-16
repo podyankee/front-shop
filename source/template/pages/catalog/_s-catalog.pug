@@ -1,0 +1,19 @@
+section.s-catalog
+	.container
+		.popular-categories
+			.section-header
+				h2.title-section Каталог стройматериалов
+			include ../../elements/catalog/_catalog-mobile-nav
+			.categories-prev
+				.categories-prev__navigation
+					.slider-nav.slider-nav--prev.categories-prev__btn-prev
+						+icon('chevron-left', 'slider-nav__icon')
+					.slider-nav.slider-nav--next.categories-prev__btn-next
+						+icon('chevron-right', 'slider-nav__icon')
+				.categories-prev__wrapper.js-categories-prev
+					include ../../elements/categories/_prev-1
+					include ../../elements/categories/_prev-2
+					include ../../elements/categories/_prev-3
+					include ../../elements/categories/_prev-4
+					include ../../elements/categories/_prev-5
+					include ../../elements/categories/_prev-6

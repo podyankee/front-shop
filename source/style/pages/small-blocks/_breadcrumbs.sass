@@ -1,0 +1,97 @@
+.s-breadcrumbs
+	padding-bottom: 0
+	+xl(padding-top,20px)
+	+lg(padding-top,10px)
+	& + section
+		padding-top: 10px
+.breadcrumbs
+	display: flex
+	align-items: flex-start
+	overflow-x: auto
+	overflow-y: hidden
+	&__icon
+		+dem(17px)
+		vertical-align: top
+	&__item
+		display: flex
+		align-items: center
+		white-space: nowrap
+		&:hover
+			.breadcrumbs-tooltip
+				display: block
+		&.breadcrumbs__item--show-nav
+			.breadcrumbs-nav
+				display: block
+		&:after
+			content: '/'
+			display: block
+			margin: 0 10px
+		&:last-child
+			&:after
+				display: none
+			.breadcrumbs__label
+				&:before
+					display: none
+	&__label
+		position: relative
+		padding-right: 20px
+		cursor: pointer
+		&:before
+			+arr(10, 5, $base-text-color, b)
+			content: ''
+			display: block
+			position: absolute
+			right: 0px
+			top: 7px
+	&-nav
+		display: none
+		background-color: $white
+		border-radius: 4px
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2)
+		position: absolute
+		top: 100%
+		border: 2px solid $action-color
+		z-index: 10
+		padding: 10px 0
+		&__link
+			display: flex
+			align-items: center
+			padding: 5px 15px
+			font-size: 14px
+			font-weight: 600
+			line-height: 20px
+			& > *
+				&:not(:last-child)
+					margin-right: 5px
+			&:hover
+				background-color: $action-color
+	&-tooltip
+		background-color: $white
+		border-radius: 4px
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2)
+		position: absolute
+		top: 100%
+		z-index: 10
+		padding: 10px
+		font-size: 12px
+		width: 230px
+		z-index: 1
+		display: none
+		&__text
+			white-space: normal
+	&__link
+		position: relative
+		padding-right: 20px
+		color: $base-text-color
+		&:before
+			+arr(10, 5, $base-text-color, b)
+			content: ''
+			display: block
+			position: absolute
+			right: 0px
+			top: 7px
+		&:hover
+			color: $breadcrumbs-link-hover
+			&:before
+				+arr(10, 5,$breadcrumbs-link-hover, b)
+
