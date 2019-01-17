@@ -1,16 +1,16 @@
 extends ../_template
 
 block variables
-	- var title = 'Каталог'
-	- var pageClass = 'catalog-page'
+	- var title = 'Категории'
+	- var pageClass = 'categories-page'
 
 block content
 	//include ../elements/_debug
 	include ../elements/_preloader
 	include ../common/_header
-	include ../elements/_breadcrumbs
-	include catalog/_s-catalog
-	include index-page/_sales-leaders
+	include categories/_categories-breadcrumbs
+	include categories/_s-categories
+	include categories/_s-leaders
 	include index-page/_you-see
 	include index-page/_questions
 	include ../common/_footer

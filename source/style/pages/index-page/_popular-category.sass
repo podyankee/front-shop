@@ -17,6 +17,7 @@
 		padding: 15px
 	&__title
 		margin-bottom: 20px
+		display: block
 		&-text
 			font-size: 22px
 			font-weight: 700
@@ -54,3 +55,15 @@
 		display: none
 		+lg-block
 			display: block
+.categories
+	columns:	4
+	column-gap: 20px
+	+xl-block
+		columns: 3
+		column-gap: 25px
+.category-item
+	background-color: $white
+	break-inside: avoid
+	border-radius: 4px
+	padding: 20px 15px
+	margin-bottom: 20px

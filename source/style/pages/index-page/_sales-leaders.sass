@@ -58,3 +58,34 @@
 		font-weight: 700
 		color: $base-text-color
 		line-height: 1.25
+
+.sales-leaders-products
+	background-color: $white
+	border-radius: 4px
+	overflow: hidden
+	&__row
+		+row-flex
+		justify-content: space-between
+		border-bottom: 1px solid #f2f2f2
+		padding-top: 20px
+		&:last-child
+			border-bottom: 0
+	&__col
+		+col-padding
+		+size(3)
+		outline: 1px solid pink
+		border-right: 1px solid #f2f2f2
+		&:last-child
+			border-right: 0
+		.product-prev
+			width: auto
+			margin: 0	
+			.product-prev__footer
+				padding: 0 20px 20px
+				opacity: 1
+				.btn
+					border-radius: 4px
+					width: auto
+		&--wide
+			+size(6)
+	

@@ -1,14 +1,13 @@
 .s-breadcrumbs
-	padding-bottom: 0
+	padding-bottom: 10px
 	+xl(padding-top,20px)
 	+lg(padding-top,10px)
-	& + section
-		padding-top: 10px
 .breadcrumbs
 	display: flex
-	align-items: flex-start
+	align-items: center
 	overflow-x: auto
 	overflow-y: hidden
+	font-size: 12px
 	&__icon
 		+dem(17px)
 		vertical-align: top
@@ -42,7 +41,7 @@
 			display: block
 			position: absolute
 			right: 0px
-			top: 7px
+			top: 4px
 	&-nav
 		display: none
 		background-color: $white
@@ -89,7 +88,7 @@
 			display: block
 			position: absolute
 			right: 0px
-			top: 7px
+			top: 4px
 		&:hover
 			color: $breadcrumbs-link-hover
 			&:before
