@@ -1,0 +1,25 @@
+.pagination
+	&__list
+		display: inline-flex
+		background-color: $white
+		overflow: hidden
+		border-radius: 4px
+	&__item
+		border-left: 1px solid #f2f2f2
+		cursor: pointer
+		&:first-child
+			border-left: 0
+		&:hover
+			border-left-color: transparent
+			background-color: $action-color
+			& + pagination__item
+				border-left-color: transparent
+		&.pagination__item--plus
+			background-color: #dedede
+
+	&__link
+		+dem(45px)
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 18px

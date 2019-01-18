@@ -1,0 +1,93 @@
+.subcategory
+	display: flex
+	& > *
+		&:not(:last-child)
+			margin-right: 20px
+	&__aside
+		$asideWidth: 255px
+		flex: 0 0 $asideWidth
+		max-width: $asideWidth
+		width: $asideWidth
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&__main
+		& > *
+			margin: 15px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&-status
+		background-color: $white
+		border-radius: 4px
+		display: flex
+		justify-content: space-between 
+		align-items: center			
+
+.tags
+	display: flex
+	align-items: flex-start
+	font-size: 14px
+	line-height: 18px
+	& > *
+		&:not(:last-child)
+			margin-right: 10px
+	&__title
+		font-weight: 600
+		flex-shrink: 0
+	&__body
+		& > *
+			&:not(:last-child)
+				margin-bottom: 10px
+				margin-right: 10px
+			&.tags__title
+				margin-right: 15px
+	&__toggle
+		border-bottom: 1px solid $link-color
+		color: $link-color
+		cursor: pointer
+		font-weight: 600
+		flex-shrink: 0
+
+.tag
+	background-color: $white
+	border-radius: 4px
+	display: inline-block
+	padding: 5px 10px
+
+.sort
+	display: flex
+	&-item
+		border-right: 1px solid #f2f2f2
+		cursor: pointer
+		font-size: 14px
+		line-height: 18px
+		padding: 15px 20px
+		display: flex
+		align-items: center
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+	&-action
+		&__current
+			color: #1fa349
+			display: flex
+			align-items: center
+			font-weight: 600
+			&:after
+				content: ''
+				+arr(10, 5, #1fa349, b)
+				display: block
+				margin-left: 5px
+.page-counter
+	display: flex
+	align-items: center
+	padding: 15px 20px
+	font-size: 14px
+	& > *
+		&:not(:last-child)
+			margin-right: 5px
