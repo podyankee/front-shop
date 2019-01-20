@@ -1,0 +1,27 @@
+.s-often-looking
+	margin-left: 205px
+.category-list__wrapper
+	background-color: $white
+	break-inside: avoid
+	border-radius: 4px
+	padding: 20px 15px
+	margin-bottom: 20px
+.title-section--small
+	font-size: 30px
+	font-weight: 600
+	line-height: 1.3
+.often-looking
+	display: flex
+	border-radius: 4px
+	overflow: hidden
+	& > *
+		border-right: 1px solid #f2f2f2
+		flex: 1
+		&:last-child
+			border-right: 0
+	.category-list__wrapper
+		margin-bottom: 0
+		border-radius: 0
+	.category-prev__item:last-child
+		.category-prev__link
+			color: $base-text-color

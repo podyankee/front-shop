@@ -1,2 +1,28 @@
 @import "_breadcrumbs"
 @import "_pagination"
+
+.counter
+	display: inline-flex
+	border: 1px solid $input-border-color
+	border-radius: 4px
+	align-items: center
+	&__btn
+		+dem(40px)
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #fafafa
+		cursor: pointer
+	&__icon
+		color: #bababa
+		font-size: 15px
+	&__current
+		display: flex
+		align-items: center
+		line-height: 40px
+		flex: 0 0 90px
+		width: 90px
+		padding: 0 10px
+		& > *
+			&:not(:last-child)
+				margin-right: 5px

@@ -262,6 +262,22 @@ var catalogMobileNav = function  () {
 		$(this).parent().siblings().removeClass('.catalog-nav__item--active');
 	});
 };
+var counter = function  () {
+	$(document).on('click', '.counter__btn--minus', function () {
+		var number = +$(this).parent().find('.counter__current-text').text(), newNumber;
+		if (number !== 0) {
+			newNumber = number- 1;
+		} else {
+			return false;
+		}
+		$(this).parent().find('.counter__current-text').text(newNumber);
+	});
+	$(document).on('click', '.counter__btn--plus', function () {
+		var number = +$(this).parent().find('.counter__current-text').text(), newNumber;
+			newNumber = number + 1;
+		$(this).parent().find('.counter__current-text').text(newNumber);
+	});
+};
 	
 	sandwich();
 	popularCategoriesSlider();
@@ -276,6 +292,7 @@ var catalogMobileNav = function  () {
 	fileUpload();
 	breadcrumbsNav();
 	catalogMobileNav();
+	counter();
 	});
 	
 	

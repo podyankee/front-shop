@@ -39,7 +39,10 @@
 	&__title
 		font-weight: 600
 		flex-shrink: 0
+		padding-top: 15px
 	&__body
+		display: flex
+		align-items: flex-start
 		& > *
 			&:not(:last-child)
 				margin-bottom: 10px
@@ -52,12 +55,15 @@
 		cursor: pointer
 		font-weight: 600
 		flex-shrink: 0
+		padding-top: 15px
+		margin-left: auto
 
 .tag
 	background-color: $white
 	border-radius: 4px
 	display: inline-block
 	padding: 5px 10px
+	max-width: 185px
 
 .sort
 	display: flex
@@ -91,3 +97,31 @@
 	& > *
 		&:not(:last-child)
 			margin-right: 5px
+		
+@import "_often-looking"
+
+.subcategory
+	&__products
+		+row-flex
+		align-items: flex-start
+		background-color: $white
+		border-radius: 4px
+		padding: 20px 5px 0
+		.product-prev
+			position: relative
+			background-color: $white
+			+col
+			+size(4)
+			&:nth-child(n+4)
+				margin-top: -110px
+			&:hover
+				box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+				z-index: 1
+				.product-prev__counter
+					opacity: 1
+			&__counter
+				opacity: 0
+				transition: $trs
+			&__price
+				margin-bottom: 20px
+			
