@@ -278,6 +278,57 @@ var counter = function  () {
 		$(this).parent().find('.counter__current-text').text(newNumber);
 	});
 };
+
+	var filterItem = function  () {
+		$(document).on('click', '.filter-item__header',function () 
+		{
+			$(this).parent().toggleClass('filter-item--active');
+		});
+	};
+
+	var filterSlider = function  () {
+		$(".filter-slider__line").each(function () {
+			let slider = $(this)[0],
+				sliderFrom = $(this).parent().find(".filter-slider__value--from")[0],
+				sliderTo = $(this).parent().find(".filter-slider__value--to")[0],
+				inputs = [sliderFrom, sliderTo],
+				type = $(this).data('range-type');
+			if (type === "price") {
+				noUiSlider.create(slider, {
+					start: [2500, 5900],
+					connect: true,
+					range: {
+						min: 0,
+						max: 10000
+					},
+					format: wNumb({
+						decimals: 0,
+						thousand: ' ',
+					})
+				});
+			} else if (type === "mm") {
+				noUiSlider.create(slider, {
+					start: [0.5, 7],
+					connect: true,
+					range: {
+						min: 0,
+						max: 10
+					},
+					format: wNumb({
+						decimals:2
+					})
+				});
+			}
+			slider.noUiSlider.on("update", function (values, handle) {
+				inputs[handle].value = values[handle];
+			});
+			inputs.forEach(function (input, handle) {
+				input.addEventListener('change', function () {
+					slider.noUiSlider.setHandle(handle, this.value);
+				});
+			});
+		});
+		};
 	
 	sandwich();
 	popularCategoriesSlider();
@@ -293,6 +344,8 @@ var counter = function  () {
 	breadcrumbsNav();
 	catalogMobileNav();
 	counter();
+	filterItem();
+	filterSlider();
 	});
 	
 	
