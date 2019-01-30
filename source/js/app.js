@@ -330,6 +330,30 @@ var counter = function  () {
 		});
 		};
 	
+var sortToggle = function () {
+	$(document).on('click', '.sort-action__header', function () {
+		if ($(this).parent().hasClass('sort-action--active')){
+			$(this).parent().removeClass('sort-action--active');
+		} else {
+			$('.sort-action').removeClass('sort-action--active');
+			$(this).parent().addClass('sort-action--active');
+		}
+	});
+};
+
+var tagsToggle = function () {
+	$(document).on('click', '.tags__toggle', function () {
+		var el = $(this).parent();
+		if (el.hasClass('tags--active')) {
+			el.removeClass('tags--active');
+			$(this).text('Все запросы');
+		} else {
+			el.addClass('tags--active');
+			$(this).text('Скрыть');
+		}
+	});
+};
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
@@ -346,6 +370,8 @@ var counter = function  () {
 	counter();
 	filterItem();
 	filterSlider();
+	sortToggle();
+	tagsToggle();
 	});
 	
 	

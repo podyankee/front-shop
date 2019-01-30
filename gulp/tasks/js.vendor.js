@@ -1,6 +1,6 @@
 'use strict';
 
-let uglify = require('gulp-uglify'),
+let uglify = require('gulp-uglify-es').default,
 		concat = require('gulp-concat')
 
 module.exports = function() {

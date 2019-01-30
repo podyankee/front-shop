@@ -1,6 +1,6 @@
 'use strict';
 
-let uglify = require('gulp-uglify')
+let uglify = require('gulp-uglify-es').default;
 
 module.exports = function() {
   $.gulp.task('js:process:dev', function() {

@@ -33,6 +33,9 @@
 	align-items: flex-start
 	font-size: 14px
 	line-height: 18px
+	&.tags--active
+		.tags__body
+			height: auto
 	& > *
 		&:not(:last-child)
 			margin-right: 10px
@@ -43,6 +46,9 @@
 	&__body
 		display: flex
 		align-items: flex-start
+		flex-wrap: wrap
+		height: 46px
+		overflow: hidden
 		& > *
 			&:not(:last-child)
 				margin-bottom: 10px
@@ -69,7 +75,6 @@
 	display: flex
 	&-item
 		border-right: 1px solid #f2f2f2
-		cursor: pointer
 		font-size: 14px
 		line-height: 18px
 		padding: 15px 20px
@@ -79,6 +84,12 @@
 			&:not(:last-child)
 				margin-right: 10px
 	&-action
+		position: relative
+		&.sort-action--active
+			.sort-action__body
+				display: block
+		&__header
+			cursor: pointer
 		&__current
 			color: #1fa349
 			display: flex
@@ -89,6 +100,33 @@
 				+arr(10, 5, #1fa349, b)
 				display: block
 				margin-left: 5px
+		&__body
+			background-color: $white
+			border-radius: 4px
+			box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2)
+			position: absolute
+			left: -10px
+			top: calc(100% + 10px)
+			max-width: 205px
+			z-index: 2
+			overflow: hidden
+			display: none
+		&__item
+			font-weight: 600
+			font-size: 14px
+			line-height: 18px
+			padding: 6px 15px
+			background-color: $white
+			display: flex
+			align-items: flex-start
+			white-space: nowrap
+			& > *
+				&:not(:last-child)
+					margin-right: 5px
+			&:hover
+				background-color: $action-color
+		&__description
+			color: $placeholder-color
 .page-counter
 	display: flex
 	align-items: center
@@ -110,20 +148,33 @@
 		.product-prev
 			position: relative
 			background-color: $white
+			transition: none
 			+col
 			+size(4)
-			&:nth-child(n+4)
-				margin-top: -110px
 			&:hover
 				box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
 				z-index: 1
-				.product-prev__counter
-					opacity: 1
-			&__counter
+				border-bottom-color: transparent
+				.product-prev
+					&__body
+						background-color: $white
+						position: relative
+						z-index: 1
+					&__footer
+						opacity: 1
+						top: 100%
+			&__footer
+				position: absolute
+				left: -2px
+				right: -2px
+				top: calc(100% + 4px)
 				opacity: 0
-				transition: $trs
-			&__price
-				margin-bottom: 20px
+				background-color: $white
+				border: 2px solid $action-color
+				border-top: 0
+				transition: none
+			&__counter
+				margin: 0 20px 15px
 
 @import "_filter"
 			

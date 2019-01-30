@@ -1,0 +1,51 @@
+.color-block
+	&.color-block--big
+		+dem(12px)
+.colors-catalog
+	overflow: auto
+	& > *
+		margin: 30px 0
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+	&__block
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&__footer
+		padding: 30px 20px
+		display: flex
+		align-items: center
+		& > *
+			&:not(:last-child)
+				margin-right: 30px
+	&__title
+		margin-bottom: 15px
+	&-list
+		columns: 5
+		column-fill: auto
+		column-gap: 10px
+		& > *
+			margin: 10px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+
+.input-field--size-s
+	width: 30%
+#popup-colors-catalog
+	max-height: calc(100vh - 80px)
+	display: flex
+	flex-direction: column
+	.popup
+		&__header
+			flex: 0 0 auto
+		&__body
+			flex: 1
+		&__footer
+			flex: 0 0 auto

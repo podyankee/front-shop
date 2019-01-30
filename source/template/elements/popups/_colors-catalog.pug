@@ -1,0 +1,104 @@
+mixin popColorCheckbox(text, color)
+	label.checkbox
+		input(type="checkbox")
+		span.checkbox__custom
+		.checkbox__body
+			span.checkbox__text=text
+			.color-block.color-block--big(style=`background-color: ${color}`)
+
+.popup.popup--big.mfp-hide#popup-colors-catalog
+	.popup__header
+		span.popup__title Каталог цветов
+		.popup__close
+			.icon.icon__close.popup__close-icon &times;
+	.popup__body
+		.colors-catalog
+			.colors-catalog__block
+				.colors-catalog__item
+					.colors-catalog__input
+						input(placeholder="Введите код цвета RAL").input-field.input-field--size-s
+				.colors-catalog__item
+					label.checkbox.checkbox--bold
+						input(type="checkbox")
+						span.checkbox__custom
+						.checkbox__body
+							span.checkbox__text Выбрать все 213 цветов
+			.colors-catalog__block
+					.colors-catalog__item
+						.colors-catalog__title
+							label.checkbox.checkbox--big
+								input(type="checkbox")
+								span.checkbox__custom
+								.checkbox__body
+									span.checkbox__text Каталог цветов RAL
+					.colors-catalog__item
+						.colors-catalog__title
+							label.checkbox.checkbox--bold
+								input(type="checkbox")
+								span.checkbox__custom
+								.checkbox__body
+									span.checkbox__text Все оттенки зеленого
+						ul.colors-catalog-list
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+							li.colors-catalog-list__item
+								+popColorCheckbox('RAL 1000', '#417505')
+		.colors-catalog__footer
+			span.colors-catalog__count Выбрано <b>30</b> цветов
+			button.btn Добавить в фильтр
