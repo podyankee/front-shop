@@ -1,8 +1,13 @@
 .color-block
 	&.color-block--big
 		+dem(12px)
+	&.color-block--xxl
+		+dem(60px)
 .colors-catalog
+	flex: 1
 	overflow: auto
+	padding: 0 30px
+	position: relative
 	& > *
 		margin: 30px 0
 		&:first-child
@@ -26,15 +31,51 @@
 	&__title
 		margin-bottom: 15px
 	&-list
-		columns: 5
-		column-fill: auto
-		column-gap: 10px
+		display: flex
+		flex-wrap: wrap
+		&__item
+			position: relative
+			&:hover
+				.colors-catalog-list-tooltip
+					display: flex
+				.checkbox__text
+					text-decoration: underline
 		& > *
-			margin: 10px 0
+			margin: 5px 0
+			break-inside: avoid
+			width: calc(100% / 5)
 			&:first-child
 				margin-top: 0
 			&:last-child
 				margin-bottom: 0
+		&-tooltip
+			background-color: $white
+			border-radius: 4px
+			position: absolute
+			left: 50%
+			bottom: calc(100% + 15px)
+			box-shadow: 0 0 30px 0 rgba(0,0,0,0.2)
+			padding: 10px
+			display: none
+			flex-direction: column
+			font-size: 14px
+			z-index: 5
+			&:after
+				content: ''
+				+dem(16px)
+				background-color: $white
+				position: absolute
+				left: 50%
+				bottom: -9px
+				transform: translateX(-50%) rotate(45deg)
+			&__name
+				font-weight: 700
+			& > *
+				margin: 3px 0
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
 
 .input-field--size-s
 	width: 30%

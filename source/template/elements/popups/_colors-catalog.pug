@@ -1,4 +1,8 @@
 mixin popColorCheckbox(text, color)
+	.colors-catalog-list-tooltip
+			span.colors-catalog-list-tooltip__name=text
+			span.colors-catalog-list-tooltip__descr Зеленый мох
+			.color-block.color-block--xxl(style=`background-color: ${color}`)
 	label.checkbox
 		input(type="checkbox")
 		span.checkbox__custom
