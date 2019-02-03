@@ -1,0 +1,17 @@
+extends ../_template
+
+block variables
+	- var title = 'Карта сайта'
+	- var pageClass = 'site-map-page'
+
+block content
+	//include ../elements/_debug
+	include ../elements/_preloader
+	include ../common/_header
+	include site-map/_site-map-breadcrumbs
+	include site-map/_s-site-map
+	include index-page/_you-see
+	include index-page/_questions
+	include ../common/_footer
+	include ../elements/popups/_popups
+block script

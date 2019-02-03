@@ -1,0 +1,37 @@
+.site-map
+	background-color: $white
+	border-radius: 4px
+	&-block
+		border-bottom: 1px solid #ededed
+		padding: 40px 30px
+		&:last-child
+			border-bottom: 0
+		&__header
+			margin-bottom: 30px
+		&__title
+			font-weight: 600
+			font-size: 30px
+		&__body
+			column-count: 4
+			column-gap: 20px
+			column-fill: auto
+			& > *
+				margin-bottom: 30px
+				&:last-child
+					margin-bottom: 0
+	&-item
+		break-inside: avoid
+		&__title
+			display: block
+			font-size: 18px
+			line-height: 1.44
+			margin-bottom: 10
+	&-list
+		& > *
+			margin: 10px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+		&__link
+			color: $link-color-light

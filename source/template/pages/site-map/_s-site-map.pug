@@ -1,0 +1,64 @@
+mixin siteMapLink(link, text)
+	li.site-map-list__item
+		a(href=link).site-map-list__link=text
+
+section.s-site-map
+	.container
+		.section-header
+			h1.title-page Карта сайта
+		.site-map
+			.site-map-block
+				.site-map-block__header
+					.site-map-block__title Название раздела
+				.site-map-block__body
+					.site-map-item
+						span.site-map-item__title Название подраздела
+						ul.site-map-list
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+					.site-map-item
+						span.site-map-item__title Название подраздела
+						ul.site-map-list
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+							+siteMapLink('#', 'Название страницы')
+					.site-map-item
+						span.site-map-item__title Название подраздела
+						ul.site-map-list
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+							+siteMapLink('#', 'Название страницы')
+					.site-map-item
+						span.site-map-item__title Название подраздела
+						ul.site-map-list
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+					.site-map-item
+						span.site-map-item__title Название подраздела
+						ul.site-map-list
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+					.site-map-item
+						span.site-map-item__title Название подраздела
+						ul.site-map-list
+							+siteMapLink('#', 'Название страницы')
+			.site-map-block
+				.site-map-block__header
+					.site-map-block__title Название раздела
+				.site-map-block__body
+					.site-map-item
+						span.site-map-item__title Название подраздела
+						ul.site-map-list
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
+							+siteMapLink('#', 'Название страницы')
+					.site-map-item
+						span.site-map-item__title Название подраздела
+						ul.site-map-list
+							+siteMapLink('#', 'Название страницы')
+							+siteMapLink('#', 'Другое название страницы')
