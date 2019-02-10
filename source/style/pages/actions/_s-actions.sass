@@ -1,0 +1,205 @@
+.title
+	&-section
+		&-small
+			font-size: 30px
+			font-weight: 600
+			line-height: 1.25
+	&--center
+		text-align: center
+.actions
+	background-color: $white
+	&-period
+		&__text
+			color: $link-color
+			font-size: 22px
+			font-weight: 700
+			position: relative
+			padding-right: 25px
+			&:after
+				content: ''
+				+arr(14, 7, #1fa349, b)
+				position: absolute
+				right: 0
+				top: 12px
+.actions-block
+	padding: 40px 30px
+	&__header
+		display: flex
+		align-items: baseline
+		margin-bottom: 30px
+		justify-content: center
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+	&-prev
+		display: flex
+		border-radius: 4px
+		overflow: hidden
+		background-color: $white
+		box-shadow: 0 0 30px 0 rgba(0,0,0,0.1)
+		&:hover
+			.actions-prev-big
+				&__body
+					border-color: $action-color
+		&__image
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center 
+			flex: 0 0 230px
+			width: 230px
+			display: block
+	&__header
+		margin-bottom: 30px
+	&__footer
+		display: flex
+		justify-content: center
+		padding-top: 30px
+.actions-prev-big
+	&__body
+		position: relative
+		padding-right: 80px
+		border: 2px solid transparent
+		border-left: 0
+		flex: 1
+	&__content
+		display: flex
+		flex-direction: column
+		padding: 20px
+		& > *
+			margin: 5px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&__name
+		font-size: 24px
+		font-weight: 600
+		color: $base-text-color
+	&__descr
+		font-style: 18px
+		line-height: 1.44
+		color: $base-text-color
+.action
+	max-width: 850px
+	&-time
+		display: flex
+		align-items: center
+		font-size: 14px
+		color: #10ae42
+		& > *
+			&:not(:last-child)
+				margin-right: 5px
+		&__icon
+			+dem(17px, 23px)
+			fill: #10ae42
+	&__description
+		font-size: 24px
+		line-height: 1.44
+	&__header
+		margin-bottom: 30px
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&__info
+		display: flex
+		align-items: center
+		& > *
+			&:not(:last-child)
+				margin-right: 15px
+	&-date
+		background-color: #10ae42
+		border-radius: 4px
+		font-size: 14px
+		font-weight: 600
+		color: $white
+		padding: 10px
+	&__body
+		& > *
+			margin: 30px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&-item
+		& > *
+			margin: 10px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+		&__subtitle
+			display: block
+			font-size: 18px
+			line-height: 1.44
+.action-prev
+	&__mark
+		+dem(40px, 60px)
+		position: absolute
+		right: -2px
+		top: -2px
+		padding: 10px
+		&:before
+			content: ''
+			+arr(40, 15, $white, t)
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+		&-icon
+			+dem(20px)
+			fill: $white
+.actions-block-prev
+	&.action-prev--gift
+		.action-prev
+			&__mark
+				background-color: #10ae42
+	&.action-prev--discount
+		.action-prev
+			&__mark
+				background-color: #ff001f
+	&.action-prev--closed
+		.action
+			&-time
+				color: #d0021b
+				&__icon
+					fill: #d0021b
+
+			&-prev
+				&__mark
+					background-color: #bababa
+
+.actions-block__body
+	& > *
+		margin: 30px 0
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+
+.static
+	&-content
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&-text
+		font-size: 14px
+		line-height: 18px
+
+.action
+	&-goods
+		&-block
+			& > *
+				margin: 20px 0
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
+			&__title
+				font-size: 24px
+				line-height: 1.44

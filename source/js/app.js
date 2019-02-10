@@ -354,6 +354,22 @@ var tagsToggle = function () {
 	});
 };
 
+var dropdown = function () {
+	$(document).on('click', '.dropdown__toggle', function () {
+		var dropdown = $(this).parent();
+		dropdown.toggleClass('dropdown--show')
+	});
+	if($(window).width() > 768) {
+		$('body').click(function (e) {
+			if($(e.target).closest('.dropdown--show').length ===0) {
+				$('.dropdown').removeClass('dropdown--show');
+			}
+		});
+	}
+};
+
+
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
@@ -372,6 +388,7 @@ var tagsToggle = function () {
 	filterSlider();
 	sortToggle();
 	tagsToggle();
+	dropdown();
 	});
 	
 	

@@ -1,0 +1,18 @@
+extends ../_template
+
+block variables
+	- var title = 'Страница акции'
+	- var pageClass = 'action-page'
+
+block content
+	//include ../elements/_debug
+	include ../elements/_preloader
+	include ../common/_header
+	include action/_action-breadcrumbs
+	include action/_s-action
+	include action/_s-action-goods
+	include index-page/_you-see
+	include index-page/_questions
+	include ../common/_footer
+	include ../elements/popups/_popups
+block script

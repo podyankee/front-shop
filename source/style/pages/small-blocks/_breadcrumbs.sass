@@ -31,6 +31,10 @@
 			.breadcrumbs__label
 				&:before
 					display: none
+		&.dropdown
+			&.dropdown--show
+				.dropdown__body
+					+xs(display,none)
 	&__label
 		position: relative
 		padding-right: 20px
