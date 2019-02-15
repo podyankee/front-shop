@@ -1,0 +1,78 @@
+mixin employee(photo,name)
+	li.employee
+		.employee__img-wrapper
+			img.employee__img(src="assets/img/users/" + photo, alt="alt")
+		span.employee__name=name
+
+
+
+section.s-about
+	.container
+		.section-header
+			h1.title-page Компания 
+		.about
+			.about-block.about-block--width-small
+				p.about__text Предприятие  &#171;Веневский&#187; работает с 2008 года и специализируется на производстве рулонной холоднокатанной стали:
+				ul.about-list
+					li.about-list__item Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности позволяет оценить значение направлений прогрессивного развития. Таким образом рамки и место обучения кадров играет важную роль в формировании дальнейших направлений развития.
+					li.about-list__item С другой стороны рамки и место обучения кадров требуют определения и уточнения дальнейших направлений развития. Задача организации, в особенности же консультация с широким активом влечет за собой процесс внедрения и модернизации систем массового участия.
+					li.about-list__item Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания.
+				p.about__text Вся производимая продукция сертифицирована и соответствует требованиям ГОСТ и ТУ.
+			.about-block
+				.about-video
+					.about-video__col
+						h3.title-section-small Видеопрезентация
+						a.about-video__content.js-popup-link(href="#", style="background-image:url('assets/img/content/actions/actions-prev-1.jpeg')")
+							+icon('play', 'about-video__icon')
+					.about-video__col
+						h3.title-section-small Виртуальный тур
+						a.about-video__content.js-popup-link(href="#", style="background-image:url('assets/img/content/actions/actions-prev-2.jpeg')")
+							+icon('eye', 'about-video__icon')
+			.about-block.about-block--border
+				h3.title-section-small Сертификаты
+				.sertificate-block
+					a(href="#").sertificate-block__item
+						img.sertificate__img(src="assets/img/sertificate.jpg", alt="alt")
+						.sertificate__hover
+							+icon('pdf', 'sertificate__icon')
+							span.sertificate__text Открыть PDF
+					a(href="#").sertificate-block__item
+						img.sertificate__img(src="assets/img/sertificate.jpg", alt="alt")
+						.sertificate__hover
+							+icon('pdf', 'sertificate__icon')
+							span.sertificate__text Открыть PDF
+			.about-block.about-block--mb-0
+				h3.title-section-small Сотрудники
+				ul.employees-list
+					+employee('user-1.jpg', 'Пантелеймон Константинопольский')
+					+employee('user-2.jpg', 'Ирина Белых')
+					+employee('user-3.jpg', 'Алена Иванова')
+					+employee('user-6.jpg', 'Сергей Долгопрудников')
+					+employee('user-7.jpg', 'Пантелеймон Константинопольский')
+					+employee('user-8.jpg', 'Пантелеймон Константинопольский')
+					+employee('user-9.jpg', 'Пантелеймон Константинопольский')
+					+employee('user-4.jpg', 'Ирина Белых')
+					+employee('user-5.jpg', 'Алена Иванова')
+			.about-block
+				h3.title-section-small Нас рекомендуют
+				.sertificate-block
+					a(href="#").sertificate-block__item
+						img.sertificate__img(src="assets/img/sertificate.jpg", alt="alt")
+						.sertificate__hover
+							+icon('pdf', 'sertificate__icon')
+							span.sertificate__text Открыть PDF
+					a(href="#").sertificate-block__item
+						img.sertificate__img(src="assets/img/sertificate.jpg", alt="alt")
+						.sertificate__hover
+							+icon('pdf', 'sertificate__icon')
+							span.sertificate__text Открыть PDF
+					a(href="#").sertificate-block__item
+						img.sertificate__img(src="assets/img/sertificate.jpg", alt="alt")
+						.sertificate__hover
+							+icon('pdf', 'sertificate__icon')
+							span.sertificate__text Открыть PDF
+					a(href="#").sertificate-block__item
+						img.sertificate__img(src="assets/img/sertificate.jpg", alt="alt")
+						.sertificate__hover
+							+icon('pdf', 'sertificate__icon')
+							span.sertificate__text Открыть PDF
