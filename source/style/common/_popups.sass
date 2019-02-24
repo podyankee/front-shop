@@ -20,6 +20,7 @@
 	position: relative
 	max-width: 520px
 	margin: 50px auto
+	overflow: hidden
 	+lg-block
 		margin: 50px 15px
 	&__header
@@ -68,6 +69,7 @@
 			margin-bottom: 20px
 			line-height: 1.44
 	&.popup--big
+		margin: 0 auto
 		max-width: 800px
 		.popup
 			&__header
@@ -78,6 +80,14 @@
 			&__title
 				font-size: 30px
 				font-weight: 600
+	&.popup--big.popup--header
+		&-white
+			.popup
+				&__header
+					background-color: $white
+				&__title
+					color: $base-text-color
+					font-size: 18px
 
 // Form group styles
 .form-group
@@ -120,7 +130,7 @@
 				+lg-block
 					flex: 1
 					max-width: 100%
-				
+
 .form-line__info--size-s
 	font-size: 12px
 // File upload styles
@@ -128,7 +138,7 @@
 	display: flex
 	align-items: center
 	cursor: pointer
-	input[type="file"]  
+	input[type="file"]
 		display: none
 	&__custom
 		color: #1fa349
@@ -317,7 +327,7 @@
 		top: 100%
 		left: -12px
 		+dem(24px)
-		line-height: 24px 
+		line-height: 24px
 		text-align: center
 		transition: $trs
 		&:hover
@@ -339,4 +349,4 @@
 				+lg-block
 					margin-right: 0
 					margin-bottom: 10px
-	
+

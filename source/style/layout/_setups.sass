@@ -96,13 +96,13 @@ audio, canvas, iframe, img, svg, video, textarea
 .btn
 	background-color: $action-color
 	cursor: pointer
-	font-weight: 600	
+	font-weight: 600
 	line-height: 20px
 	padding: 8px 20px
 	border-radius: 4px
 	display: inline-flex
 	align-items: center
-	transition: $trs	
+	transition: $trs
 	border: 2px solid transparent
 	white-space: nowrap
 	+lg-block
@@ -231,3 +231,10 @@ textarea, input
 .title-page
 	.count-text
 		font-size: 30px
+.search.search__line
+	&--not-found
+		.input-field
+			flex: 0 0 420px
+			width: 420px
+		.search__icon
+			fill: $black
