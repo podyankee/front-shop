@@ -4,7 +4,7 @@ header.header
 			include ../elements/header/_location
 			include ../elements/header/_header-navigation
 			.user-nav.header-top__user-nav
-				a(href="#").user-nav__link Войти
+				a(href="#popup-login").js-popup-link.user-nav__link Войти
 	.header-main
 		.container
 			.mobile-nav__wrapper
@@ -27,7 +27,7 @@ header.header
 								a(href="#").mobile-nav__link Контакты
 						ul.mobile-user-nav__list
 							li.mobile-user-nav__item
-								a(href="#").mobile-user-nav__link Войти 
+								a(href="#").mobile-user-nav__link Войти
 						.location-mobile
 							+icon('location')
 							span.location__current Оксфорд

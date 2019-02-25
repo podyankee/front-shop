@@ -1,0 +1,47 @@
+.popup.mfp-hide#popup-registration
+	.popup__header
+		span.popup__title Регистрация
+		.popup__close
+			.icon.icon__close.popup__close-icon &times;
+	.popup__body
+		form.form
+			.popup__row
+				.popup__col
+						.form__body
+							.form-line
+								.form-group
+									.form-group__header
+										label.form-group__label Электронная почта
+									.form-group__body
+										input.input-field(type="email", name="email", placeholder="email@email.com")
+							.form-line
+								.form-group
+									.form-group__header
+										label.form-group__label Пароль
+									.form-group__body
+										input.input-field(type="password", placeholder="Введите пароль", name="password", minlength="8")
+									.form-group__footer
+										.form-password-requirements
+											span.form-password-requirements__name Укажите сильный пароль:
+											ul.form-password-requirements__list
+												li.form-password-requirements__item Длина не менее 8 символов
+												li.form-password-requirements__item.form-password-requirements__item--success Включает буквыв и цифры
+							.form-line
+								.form-group
+									.form-group__header
+										label.form-group__label Имя и фамилия
+									.form-group__body
+										input.input-field(type="text", placeholder="Имя и фамилия ", name="fio")
+				.popup__col.popup__col--small
+					.unregistered
+						span.unregistered__text Уже зарегистрированы?
+						a(href="#popup-login").js-popup-link.link--underline Вход в личный кабинет
+						span.unregistered__info Зарегистрированные пользователи получают скидку 3% на весь ассортимент
+			.form__footer
+				.form-line
+					.form-group.form-group--width-m
+						.form-group__body
+							input.btn.btn--size-l.btn--fill(type="submit", value="Зарегистрироваться")
+					span.form-line__info И получить скидку 3%
+				.form-line
+					p.form-info Регистрируясь, вы соглашаетесь с #[a(href="#").form-info__link политикой конфиденциальности]

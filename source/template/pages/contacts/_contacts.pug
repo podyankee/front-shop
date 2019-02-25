@@ -1,0 +1,101 @@
+section.s-contacts
+	.container
+		.section-header
+			h1.title-page Контакты
+		.contacts
+			.contacts-block
+				.contact__places
+					.contacts-place
+						.contacts-place__info
+							.contacts-place__group
+								span.contacts__title Центральный офис в Лондоне
+								span.contacts__text 111033 , Лондон, Флит стрит, дом 11, строение 9
+							.contacts-place__group
+								.contacts-place__time
+									span.contacts__text #[b Время работы]
+									span.contacts__text пн-пт 9:00-18:00
+							.contacts-place__group
+								.contacts-data
+									+icon('mail', 'contacts-data__icon')
+									.contacts-data__main
+										a.contacts-data__mail.link-green(href="mailto:zakaz@venevsky.uk") zakaz@venevsky.uk
+								.contacts-data
+									+icon('phone', 'contacts-data__icon')
+									.contacts-data__main
+										span.contacts__text Звоните круглосуточно
+										a.contacts-data__phone.link-green(href="tel:+88003348888") +8 800 334-88-88
+										a(href="#").link-underline.contacts-data__qr.text-color Набрать номер по QR коду
+						.contacts-place__map
+					.contacts-place
+						.contacts-place__info
+							.contacts-place__group
+								span.contacts__title Производство
+								span.contacts__text 111011, Birmingham, Locksmith str., 10 - 7
+							.contacts-place__group
+								.contacts-place__time
+									span.contacts__text #[b Время работы]
+									span.contacts__text пн-чт 9:00-17:00, время заезда до 16:00
+									span.contacts__text пт 9:00-16:00, время заезда до 15:00
+									span.contacts__text обед 12:00-12:45
+							.contacts-place__group
+								.contacts-place__actions-map
+									a(href="#").link-green.link-underline Скачать схему проезда
+									a(href="#").link-underline.contacts-data__qr.text-color Построить маршрут по QR коду
+						.contacts-place__map
+			.contacts-block
+				span.contacts__title Связь с директором
+				.contacts__form
+					span.contacts__text Если при взаимодействии с нашей компанией возникли какие-либо сложности, вы можете написать напрямую директору.
+					form.form
+						.form__body
+							.form-line
+								.form-group
+									.form-group__header
+										label.form-group__label Номер заказа
+									.form-group__body
+										input.input-field(placeholder="321-123", type="number", name="order-number")
+							.form-line
+								.form-group
+									.form-group__header
+										label.form-group__label Сообщение директору
+									.form-group__body
+										textarea.textarea-field(placexolder="Здравсвуйте, меня интересует...")
+							.form-line
+								.form-group.form-group--width-m.form-group--reqiured
+									label.form-group__label Контактный телефон
+									input(type="tel", name="phone", placeholder="+8 800 334-88-88").input-field.phone-mask
+							.form-line
+								.form-group
+									.form-group__header
+										label.form-group__label Электронная почта
+									.form-group__body
+										input.input-field(type="email", name="email", placeholder="email@email.com")
+						.form__footer
+							.form-line
+								.form-group.form-group--width-m
+									input(type="submit", value="Написать директору").btn.btn--size-l
+							.form-line
+								p.form-info Нажимая на кнопку, вы соглашаетесь с #[a(href="#").form-info__link политикой конфиденциальности]
+			.contacts-block
+				span.contacts__title Реквизиты
+				.contacts-requisites
+					.contacts-requisites__item
+						span.contacts__text Общество с ограниченной ответственностью «Название компании»
+					.contacts-requisites__item
+						span.contacts__text Юридический адрес:
+						span.contacts__text 111011, London, Queeen Mary str., 11 - 9
+					.contacts-requisites__item
+						span.contacts__text Почтовый адрес:
+						span.contacts__text 111011, London, Queeen Mary str., 11 - 9
+					.contacts-requisites__item
+						span.contacts__text ИНН: 7706436472
+						span.contacts__text КПП: 770601001
+						span.contacts__text ОГРН: 1167746369471
+						span.contacts__text ОКПО: 01967810
+						span.contacts__text ОКВЭД: 51:12
+					.contacts-requisites__item
+						span.contacts__text Расчетный счет: 40702810402080001046 \
+						span.contacts__text в «Сити-Банк», г.Лондон
+						span.contacts__text КОР: 30101810200000000593
+						span.contacts__text БИК: 044525593
+
