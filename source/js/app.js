@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$('.phone-mask').inputmask({ "mask": "(999) 999-9999" });
-    
+
 	var sandwich = function () {
 		$(document).on('click', '.catalog-nav__header', function () {
 			var sandwich = $(this).find('.sandwich'),
@@ -19,7 +19,7 @@ $(document).ready(function(){
 				sandwich.toggleClass('sandwich--active');
 				catalog.toggleClass('catalog-nav--active');
 			}
-			
+
 		});
 		if($(window).width() < 768){
 			$(document).on('click', '.sandwich', function () {
@@ -32,7 +32,7 @@ $(document).ready(function(){
 					$('body').toggleClass('fixed');
 					$('.mobile-nav__wrapper').toggleClass('mobile-nav__wrapper--active');
 				}
-				
+
 			});
 		}
 	};
@@ -72,8 +72,8 @@ $(document).ready(function(){
 				adaptiveHeight: true,
 				infinite: false,
 				dots: true
-			});	
-	} 
+			});
+	}
 };
 
 var productPrevSlider = function () {
@@ -95,7 +95,7 @@ var productPrevSlider = function () {
 			{
 				breakpoint: 1239,
 				settings: {
-					slidesToShow: 3, 
+					slidesToShow: 3,
 					arrow: false,
 					dots: true
 				}
@@ -103,7 +103,7 @@ var productPrevSlider = function () {
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 1, 
+					slidesToShow: 1,
 					arrow: true,
 					dots: false
 				}
@@ -162,7 +162,7 @@ var productPrevSlider = function () {
 					var wrap = $(this)[0].closest('.hide-on-success');
 					if (wrap) {
 						$(wrap).siblings('.show-on-success').show();
-						$(wrap).hide(); 
+						$(wrap).hide();
 					}
 				}
 				return false;
@@ -211,7 +211,7 @@ var productPrevSlider = function () {
 	// 			.add(myPlacemark1);
 	// 		myMapOffice.behaviors.disable('scrollZoom');
 	// 		myMapOffice.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('foolscreenControl').remove('geolocationControl').remove('rulerControl');
-			
+
 	// 		var myMapStock = new ymaps.Map('contacts-popup-stock', {
 	// 			center: [52.480475, -1.896182],
 	// 			zoom: 15
@@ -280,7 +280,7 @@ var counter = function  () {
 };
 
 	var filterItem = function  () {
-		$(document).on('click', '.filter-item__header',function () 
+		$(document).on('click', '.filter-item__header',function ()
 		{
 			$(this).parent().toggleClass('filter-item--active');
 		});
@@ -329,7 +329,7 @@ var counter = function  () {
 			});
 		});
 		};
-	
+
 var sortToggle = function () {
 	$(document).on('click', '.sort-action__header', function () {
 		if ($(this).parent().hasClass('sort-action--active')){
@@ -368,6 +368,25 @@ var dropdown = function () {
 	}
 };
 
+var customSelect= function () {
+$(document).on('click', '.select__header', function () {
+	var sel = $(this).parent();
+	if (sel.hasClass('select--active')) {
+		sel.removeClass('select--active');
+	} else {
+		$('.select').removeClass('select--active');
+		sel.addClass('select--active');
+	}
+});
+	$(document).on('click', '.select__item', function () {
+		var val = $(this).find('.select__value').text(),
+		sel = $(this).closest('.select');
+		console.log(sel);
+		sel.removeClass('select--active');
+		sel.find('.select__current').text(val);
+	});
+};
+
 
 
 	sandwich();
@@ -389,9 +408,10 @@ var dropdown = function () {
 	sortToggle();
 	tagsToggle();
 	dropdown();
+	customSelect();
 	});
-	
-	
+
+
 var popularCategoriesSlider = function () {
 	var sliderElement = $('.js-categories-prev');
 	if ($(window).width() <  768 && !(sliderElement.hasClass('slick-initialized'))) {

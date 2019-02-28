@@ -1,0 +1,17 @@
+extends ../_template
+
+block variables
+	- var title = 'Личный кабинет - мой профиль'
+	- var pageClass = 'cabinet-page'
+
+block content
+	//include ../elements/_debug
+	include ../elements/_preloader
+	include ../common/_header
+	include cabinet/_cabinet-breadcrumbs
+	include cabinet/_s-cabinet
+	include index-page/_you-see
+	include index-page/_questions
+	include ../common/_footer
+	include ../elements/popups/_popups
+block script

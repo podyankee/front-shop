@@ -1,0 +1,40 @@
+.select
+	position: relative
+	background-color: $white
+	&.select--active
+		.select
+			&__header
+				border-radius: 4px 4px 0 0
+				border-color: $action-color
+			&__body
+				display: block
+				border-color: $action-color
+	&__header
+		border: 1px solid $input-border-color
+		border-radius: 4px
+		padding: 15px
+		font-size: 16px
+		cursor: pointer
+		position: relative
+		&::before
+			content: ''
+			+arr(10, 5, $black, b)
+			+abs-pos(22px, 15px)
+	&__input
+		display: none
+	&__body
+		background-color: $white
+		border-radius: 0 0 4px 4px
+		display: none
+		border: 1px solid $input-border-color
+		border-top: 0
+		+abs-pos(100%,0,auto,0)
+		z-index: 10
+	&__item
+		padding: 10px
+		cursor: pointer
+		&:hover
+			background-color: rgba(248, 231, 28, 0.4)
+		& > *
+			&:not(:last-child)
+				margin-right: 5px

@@ -1,0 +1,32 @@
+.cabinet-nav
+	flex: 0 0 255px
+	width: 255px
+	&__list
+		background-color: $white
+		border-radius: 4px
+		& > *
+			&:first-child
+				border-radius: 4px 4px 0 0
+			&:last-child
+				border-radius: 0 4px 4px
+				border: 0
+	&__item
+		border: 1px solid transparent
+		border-bottom-color: $input-border-color
+		position: relative
+		&.cabinet-nav__item--active
+			border: 2px solid $action-color
+			&::after
+				+abs-pos($right:-10px,$top:50%)
+				+dem(16px)
+				content: ''
+				border-top: 2px solid $action-color
+				border-right: 2px solid $action-color
+				background-color: $white
+				transform: translatey(-50%) rotate(45deg)
+	&__link
+		display: block
+		font-size: 18px
+		line-height: 1.44
+		padding: 20px
+		color: $base-text-color

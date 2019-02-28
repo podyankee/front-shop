@@ -1,0 +1,71 @@
+section.s-cabinet
+	.container
+		.section-header
+			h1.title-page Личный кабинет
+		.cabinet
+			include _cabinet-navigation
+			.cabinet__main
+				form.profile-form.form
+					.form__body
+						.profile-form__item
+							span.profile-form__title Личные данные
+							.form-line
+								.form-group
+									.form-group__header
+										.form-group__label Имя и фамилия
+									.form-group__body
+										input.input-field(type="text", value="Пантелеймон Константинопольский", name="fio")
+							.form-line
+								.form-group
+									.form-group__header
+										.form-group__label Контактный телефон
+									.form-group__body
+										input.input-field(type="tel", value="+8(800)334-88-88", name="phone")
+								.form-group
+									.form-group__header
+										.form-group__label Электронная почта
+									.form-group__body
+										input.input-field(type="email", value="email@email.com", name="phone")
+						.profile-form__item
+							span.profile-form__title Данные оплаты и доставки
+							.form-line
+								.form-group
+									.form-group__header
+										.form-group__label Предпочтительный способ получения
+									.form-group__body
+										.select
+											.select__header
+												span.select__current Доставкой
+												.select__input
+													input.input-field(type="text", name="select-field")
+											.select__body
+												ul.select__list
+													li.select__item
+														span.select__value Доставкой
+													li.select__item
+														span.select__value Курьером
+								.form-group
+									.form-group__header
+										.form-group__label Предпочтительный способ оплаты
+									.form-group__body
+										.select
+											.select__header
+												span.select__current Кредитной картой
+												.select__input
+													input.input-field(type="text", name="select-field")
+											.select__body
+												ul.select__list
+													li.select__item
+														span.select__value Кредитной картой
+													li.select__item
+														span.select__value Наличными
+							.form-line
+								.form-group.form-group--width-xl
+									.form-group__header
+										.form-group__label Адрес доставки
+									.form-group__body
+										input.input-field(type="text", value="Британия, Лондон, Букингем Палас, 1", name="delivery-address")
+					.form__footer
+						.form-line
+							.form-group
+								input.btn.btn--size-l(type="submit", value="Сохранить изменения")

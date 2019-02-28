@@ -15,12 +15,12 @@
 	width: $a
 	height: $b
 
-@function calculateRem($size) 
+@function calculateRem($size)
     $remSize: $size / 16px
     @return $remSize * 1rem
 
 
-@mixin rem($size) 
+@mixin rem($size)
     font-size: $size;
     font-size: calculateRem($size)
 
@@ -43,20 +43,19 @@
 		font-weight: $weight
 		font-style: $style
 
-		@if $asset-pipeline == true 
+		@if $asset-pipeline == true
 			src: font-url('#{$file-path}.eot')
 			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
 		@else
 			src: url('#{$file-path}.eot')
 			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
 
-@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) 
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto)
     top: $top
     right: $right
     bottom: $bottom
     left: $left
     position: absolute
-
 // triangle (ширина, высота, фон, направление стрелки)
 =arr($width, $height, $bg, $direction)
 	width: 0px
@@ -94,7 +93,7 @@
     @content
   &::-webkit-input-placeholder
     @content
-	
+
 
 @mixin btn($bg: $action-color, $fs: 16px, $lh: 17px, $ls: 0.54px, $clr: $white)
 	color: $clr
@@ -117,4 +116,4 @@
 	display: block
 	max-width: 100%
 	height: auto
-        
+
