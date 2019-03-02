@@ -1,0 +1,19 @@
+section.s-cabinet
+	.container
+		.section-header
+			h1.title-page Личный кабинет
+		.cabinet
+			include ../../elements/cabinet/_navigation
+			.cabinet__main
+				.cabinet-orders.tabs
+					.cabinet-orders__header
+						ul.cabinet-orders-nav.tabs-list
+							li(show-tab="tab-cabinet-orders").tabs-list__item.tabs-list__item--active.cabinet-orders-nav__item
+								span.cabinet-list-mobile-nav__text Заказы
+								span.count-text 12
+							li(show-tab="tab-cabinet-goods").tabs-list__item.cabinet-orders-nav__item
+								span.cabinet-list-mobile-nav__text Купленные товары
+								span.count-text 25
+					.cabinet-orders__body.tabs-content
+						include orders/_tab-orders
+						include orders/_tab-goods

@@ -1,0 +1,67 @@
+mixin sortItem(title, descr)
+	.sort-action__item
+		span.sort-action__name=title
+		if(descr)
+			span.sort-action__description=descr
+
+.tab.tab--active.tab-cabinet-orders
+	.orders
+		.orders__header
+			.sort
+				.sort-item.sort-item--border-none
+						span.sort-item__title Статаус
+						.sort-action
+							.sort-action__header
+								span.sort-action__current Любой
+							.sort-action__body
+								+sortItem('Ожидает подтверждения')
+								+sortItem('Готовится к отправке')
+								+sortItem('Отмена')
+			.page-counter
+				span.page-counter__text Страница
+				span.page-counter__text #[b  1] из 7
+		.orders__body
+			.order-prev
+				.order-prev__header
+					span.order-prev__number Заказ № 321-43
+					span.order-prev__dane от 4 сентября 2018г.
+					.order-status.order-status--waiting.order-prev__status Ожидает подтверждения
+					a(href="#").link-underline.order-prev__link Посмотреть заказ
+				.order-prev__body
+					.order-prev__block
+						.order-prev__item
+							.order-prev-line
+								span.order-prev-line__label Количество товаров
+								.order-prev-line__body
+									span.order-prev__value 24шт.
+					.order-prev__block
+						.order-prev__item
+							.order-prev-line
+								span.order-prev-line__label Контактное лицо
+								.order-prev-line__body
+									span.order-prev-line__value Вениамин Константинопольский
+							.order-prev-line
+								span.order-prev-line__label Адрес доставки
+								.order-prev-line__body
+									span.order-prev-line__value 111011, London, Queeen Mary str., 11 - 9
+									span.order-prev-line__descr Доставка по Лондону 21-23 августа
+						.order-prev__total
+							.order-prev-line
+								span.order-prev-line__label Стоимость товаров
+								.order-prev-line__body
+									span.order-prev-line__value 10 920 фунтов
+							.order-prev-line
+								span.order-prev-line__label Доставка
+								.order-prev-line__body
+									span.order-prev-line__value 500 фунтов
+							.order-prev-total-price
+								span Итого
+								span.order-prev-total-price__number 11 420 фунтов
+		.orders__footer
+			.pagination
+				ul.pagination__list
+					each page in [1,2,3,4,5,'...']
+						li.pagination__item
+							a(href="#").pagination__link=page
+					li.pagination__item.pagination__item--plus
+						a(href="#").pagination__link +

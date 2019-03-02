@@ -387,7 +387,15 @@ $(document).on('click', '.select__header', function () {
 	});
 };
 
-
+	var tabsToggle = function () {
+		$('.tabs-list__item').click(function () {
+			let tabName = $(this).attr('show-tab'),
+				tabsBody = $(this).closest('.tabs').find('.tabs-content')[0],
+				tab = $(tabsBody).find('.' + tabName);
+			$(this).addClass('tabs-list__item--active').siblings().removeClass('tabs-list__item--active');
+			$(tab).addClass('tab--active').siblings().removeClass('tab--active');
+		});
+};
 
 	sandwich();
 	popularCategoriesSlider();
@@ -409,6 +417,7 @@ $(document).on('click', '.select__header', function () {
 	tagsToggle();
 	dropdown();
 	customSelect();
+	tabsToggle();
 	});
 
 
