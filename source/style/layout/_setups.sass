@@ -128,10 +128,15 @@ audio, canvas, iframe, img, svg, video, textarea
 		color: $white
 		&:hover
 			background-color: lighten($button-green, 10%)
-	&--border-green
-		border-color: $button-green
-		background-color: $white
-		color: $button-green
+	&--border
+		&-green
+			border-color: $button-green
+			background-color: $white
+			color: $button-green
+		&-yellow
+			background-color: $white
+			border-color: $action-color
+			color: $base-text-color
 		&:hover
 			background-color: $white
 	&--transparent
@@ -262,3 +267,15 @@ textarea, input
 	display: none
 .tab--active
 	display: block
+.label-text
+	color: $link-color
+	text-transform: uppercase
+	font-size: 12px
+	letter-spacing: 0.6px
+
+.product-prev
+	&__buy-date
+		color: $label-text-color
+		font-size: 12px
+		display: block
+		margin-top: 10px

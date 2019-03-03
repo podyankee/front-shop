@@ -1,2 +1,32 @@
 .tab.tab-cabinet-goods
-	p 2
+	.my-goods
+		.my-goods__status
+			.sort
+				.sort-item.sort-item--border-none
+						span.sort-item__title Сортировать
+						.sort-action
+							.sort-action__header
+								span.sort-action__current сначала недавно заказанные
+							.sort-action__body
+								+sortItem('Ожидает подтверждения')
+								+sortItem('Готовится к отправке')
+								+sortItem('Отмена')
+			.page-counter
+				span.page-counter__text Страница &nbsp;
+				span.page-counter__number <b> 1</b> из 7
+	.my-goods__body
+		include prev-my-orders/_prev-1
+		include prev-my-orders/_prev-1
+		include prev-my-orders/_prev-1
+		include prev-my-orders/_prev-2
+		include prev-my-orders/_prev-2
+		include prev-my-orders/_prev-2
+		include prev-my-orders/_prev-2
+		include prev-my-orders/_prev-2
+		include prev-my-orders/_prev-2
+	.pagination
+				ul.pagination__list
+					each page in [1,2,3,4,5]
+						li.pagination__item
+							a(href="#").pagination__link=page
+
