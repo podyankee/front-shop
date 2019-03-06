@@ -397,6 +397,20 @@ $(document).on('click', '.select__header', function () {
 		});
 };
 
+var orderKitToggle = function () {
+	$(document).on('click', '.order-product-kit__toggle', function () {
+		var par = $(this).closest('.order-product'),
+			textElement = $(this).find('.order-product-kit__toggle-text');
+		par.toggleClass('order-product--show-kit');
+		if (par.hasClass('order-product--show-kit')) {
+			textElement.text('Скрыть состав комплекта')
+		} else {
+			textElement.text('Показаь состав комплекта')
+		}
+	});
+};
+
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
@@ -418,6 +432,7 @@ $(document).on('click', '.select__header', function () {
 	dropdown();
 	customSelect();
 	tabsToggle();
+	orderKitToggle();
 	});
 
 

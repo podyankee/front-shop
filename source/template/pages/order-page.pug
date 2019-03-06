@@ -1,0 +1,17 @@
+extends ../_template
+
+block variables
+	- var title = 'Страница заказа'
+	- var pageClass = 'order-page'
+
+block content
+	//include ../elements/_debug
+	include ../elements/_preloader
+	include ../common/_header
+	include order-page/_order-breadcrumbs
+	include order-page/_s-order
+	include index-page/_you-see
+	include index-page/_questions
+	include ../common/_footer
+	include ../elements/popups/_popups
+block script

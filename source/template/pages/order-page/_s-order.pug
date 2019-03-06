@@ -1,0 +1,172 @@
+mixin orderKitItem(text, count)
+	.order-product-kit__item
+		.order-table__cell.order-table__cell--product
+			span.order-product-kit__text=text
+		.order-table__cell.order-table__cell--count
+			span.order-product-kit__count=count
+		.order-table__cell.order-table__cell--price
+		.order-table__cell.order-table__cell--total-price
+
+section.s-order
+	.container
+		.section-header
+			h1.title-page Заказ № 321-432
+			.order-status.order-status--success Доставлен
+		.order
+			.order-description
+				span.order-description__text Создан 29 августа 2019г. в 14:23 грн
+				span.order-description__text Выполнен 4 сентября 2019г.
+			.order-table
+				.order-table__header
+					.order-table__row
+						.order-table__cell.order-table__cell--product
+							span.order-table__cell-name Название товара
+						.order-table__cell.order-table__cell--count
+							span.order-table__cell-name Количество
+						.order-table__cell.order-table__cell--price
+							span.order-table__cell-name Цена за единицу, фун.
+						.order-table__cell.order-table__cell--total-price
+							span.order-table__cell-name Стоимость, фун.
+				.order-table__body
+					.order-table__block
+						span.order-table__block-title Доборные элементы кровли
+						.order-product
+							.order-product__main
+								.order-table__cell.order-table__cell--product
+									.order-product__info
+										.order-product__image-wrapper
+											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
+										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
+										.order-product__line
+											span.order-product__line-label.label-text Артикул
+											span.order-product__line-value 13763515
+								.order-table__cell.order-table__cell--count
+									.order-product__count
+										span.order-product__count-text 10 шт.
+								.order-table__cell.order-table__cell--price
+									.order-product__price
+										span.order-product__price-old 60000
+										span.order-product__price-current 60 000
+								.order-table__cell.order-table__cell--total-price
+									.order-product__total-price
+										span.order-product__total-price-text 78
+						.order-product
+							.order-product__main
+								.order-table__cell.order-table__cell--product
+									.order-product__info
+										.order-product__image-wrapper
+											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
+											.order-product__mark.order-product__mark--changed Цена изменена
+										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
+										.order-product__line
+											span.order-product__line-label.label-text Артикул
+											span.order-product__line-value 13763515
+								.order-table__cell.order-table__cell--count
+									.order-product__count
+										span.order-product__count-text 1 шт.
+								.order-table__cell.order-table__cell--price
+									.order-product__price
+										span.order-product__price-old 66
+										span.order-product__price-current 78
+								.order-table__cell.order-table__cell--total-price
+									.order-product__total-price
+										span.order-product__total-price-text 780
+						.order-product
+							.order-product__main
+								.order-table__cell.order-table__cell--product
+									.order-product__info
+										.order-product__image-wrapper
+											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
+										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
+										.order-product__line
+											span.order-product__line-label.label-text Артикул
+											span.order-product__line-value 13763515
+								.order-table__cell.order-table__cell--count
+									.order-product__count
+										span.order-product__count-text 1 шт.
+								.order-table__cell.order-table__cell--price
+									.order-product__price
+										span.order-product__price-old
+										span.order-product__price-current Под заказ
+								.order-table__cell.order-table__cell--total-price
+									.order-product__total-price
+										span.order-product__total-price-text
+							.order-product__message
+								+icon('attention', 'order-product__message-icon')
+								span.order-product__message-text Этот товар увеличивает общий срок доставки заказа с 27 ноября до 30 ноября - 4 декабря
+					.order-table__block
+						span.order-table__block-title Металлочерепица
+						.order-product.order-product--removed
+							.order-product__main
+								.order-table__cell.order-table__cell--product
+									.order-product__info
+										.order-product__image-wrapper
+											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
+											.order-product__mark.order-product__mark--removed Удалено
+										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
+										.order-product__line
+											span.order-product__line-label.label-text Артикул
+											span.order-product__line-value 13763515
+								.order-table__cell.order-table__cell--count
+									.order-product__count
+										span.order-product__count-text 10 шт.
+								.order-table__cell.order-table__cell--price
+									.order-product__price
+										span.order-product__price-old 60000
+										span.order-product__price-current 60 000
+								.order-table__cell.order-table__cell--total-price
+									.order-product__total-price
+										span.order-product__total-price-text 78
+						.order-product
+							.order-product__main
+								.order-table__cell.order-table__cell--product
+									.order-product__info
+										.order-product__image-wrapper
+											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
+											.order-product__mark.order-product__mark--changed Изменено количество
+										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
+										.order-product__line
+											span.order-product__line-label.label-text Артикул
+											span.order-product__line-value 13763515
+								.order-table__cell.order-table__cell--count
+									.order-product__count
+										span.order-product__count-text 1 шт.
+								.order-table__cell.order-table__cell--price
+									.order-product__price
+										span.order-product__price-old 66
+										span.order-product__price-current 78
+								.order-table__cell.order-table__cell--total-price
+									.order-product__total-price
+										span.order-product__total-price-text 780
+					.order-table__block
+						span.order-table__block-title Готовые комплекты
+						.order-product.order-product--show-kit
+							.order-product__main
+								.order-table__cell.order-table__cell--product
+									.order-product__info
+										.order-product__image-wrapper
+											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
+										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
+										.order-product__line
+											span.order-product__line-label.label-text Артикул
+											span.order-product__line-value 13763515
+										.order-product-kit__toggle
+											span.order-product-kit__toggle-text Скрыть состав комплекта
+								.order-table__cell.order-table__cell--count
+									.order-product__count
+										span.order-product__count-text 10 шт.
+								.order-table__cell.order-table__cell--price
+									.order-product__price
+										span.order-product__price-old 60000
+										span.order-product__price-current 60 000
+								.order-table__cell.order-table__cell--total-price
+									.order-product__total-price
+										span.order-product__total-price-text 78
+							.order-product-kit__hide
+								+orderKitItem('Желоб полукруглый, 125ммб 3м, RAL9003', '2 шт')
+								+orderKitItem('Заглушка торц. универс., 125мм, 3м, RAL900', '1шт')
+								+orderKitItem('Желоб полукруглый, 125ммб 3м, RAL9003', '2 шт')
+								+orderKitItem('Заглушка торц. универс., 125мм, 3м, RAL900', '1шт')
+								+orderKitItem('Желоб полукруглый, 125ммб 3м, RAL9003', '2 шт')
+								+orderKitItem('Заглушка торц. универс., 125мм, 3м, RAL900', '1шт')
+				.order-table__footer

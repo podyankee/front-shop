@@ -187,6 +187,7 @@ audio, canvas, iframe, img, svg, video, textarea
 			&:last-child
 				margin-bottom: 0
 .link
+	color: $base-text-color
 	&-white
 		color: $white
 	&-green
@@ -195,8 +196,6 @@ audio, canvas, iframe, img, svg, video, textarea
 		color: $action-color
 	&-underline
 		text-decoration: underline
-.link
-	color: $base-text-color
 
 
 .header__menu, .header__item--mobile-hide, .header-address
@@ -279,3 +278,13 @@ textarea, input
 		font-size: 12px
 		display: block
 		margin-top: 10px
+
+.section-header
+	& > *
+		&:not(:last-child)
+			margin-right: 20px
+.order-status
+	&--success
+		padding: 20px
+		background: $button-green
+		color: $white
