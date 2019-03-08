@@ -190,12 +190,26 @@ audio, canvas, iframe, img, svg, video, textarea
 	color: $base-text-color
 	&-white
 		color: $white
+		display: inline-flex
+		align-items: center
 	&-green
 		color: $link-color
+		display: inline-flex
+		align-items: center
 	&-yellow
 		color: $action-color
+		display: inline-flex
+		align-items: center
 	&-underline
 		text-decoration: underline
+		display: inline-flex
+		align-items: center
+	&-icon
+		+dem(15px)
+		fill: #1fa349
+		margin-right: 5px
+		display: inline-flex
+		align-items: center
 
 
 .header__menu, .header__item--mobile-hide, .header-address
@@ -288,3 +302,48 @@ textarea, input
 		padding: 20px
 		background: $button-green
 		color: $white
+.descr-text
+	font-size: 12px
+	color: $label-text-color
+
+.helper
+	max-width: 550px
+	width: 100%
+	& > *
+		margin: 20px 0
+		&:last-child
+			margin-bottom: 0
+	&__title
+		display: block
+		font-size: 24px
+		line-height: 1.44
+		margin-bottom: 20px
+	&__description
+		font-size: 18px
+		line-height: 1.44
+		margin-bottom: 30px
+	&__description-small
+		font-size: 14px
+		line-height: 1.44
+		margin-bottom: 20px
+	&__row
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 20px
+	&__text
+		font-size: 14px
+	&__col
+		display: flex
+		flex-direction: column
+		& > *
+			margin: 4px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&__info
+		color: $label-text-color
+		font-size: 12px
+	.btn
+		width: fit-content

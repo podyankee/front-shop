@@ -43,6 +43,9 @@
 			&--remove
 				flex: 0 50px
 				width: 50px
+				display: flex
+				align-items: center
+				justify-content: center
 	&__block
 		padding: 15px 0
 		&-title
@@ -165,3 +168,119 @@
 								transform: rotate(180deg)
 					&__hide
 						display: block
+		&__remove
+			cursor: pointer
+			+dem(24px)
+			fill: #dedede
+			&:hover
+				fill: $action-color
+.order
+	&-price
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		padding: 30px 20px 50px
+		& > *
+			margin: 5px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+		&__line
+			display: flex
+			justify-content: space-between
+			align-items: baseline
+			max-width: 315px
+			font-size: 18px
+			line-height: 1.44
+			width: 100%
+			&.order-price__line--total
+				max-width: 210px
+				.order-price__line-value
+					font-size: 24px
+					font-weight: 700
+		&__descr
+			font-size: 12px
+			color: $label-text-color
+	&-info
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 5px
+		&__col
+			flex: 1
+			background-color: $white
+			padding: 15px 30px 30px
+			&.order-info__col
+				&--wide
+					flex: 0 0 420px
+					width: 420px
+		&__title
+			display: block
+			font-size: 18px
+			line-height: 1.44
+			margin-bottom: 15px
+		&__line
+			display: flex
+			flex-direction: column
+			& > *
+				margin: 4px 0
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
+		&__text
+			font-size: 14px
+		&__body
+			& > *
+				margin: 20px 0
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
+		&__block
+			& > *
+				margin: 10px 0
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
+
+.basket
+	& > *
+		margin: 20px 0
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+	&-price
+		display: flex
+		align-items: flex-end
+		flex-direction: column
+		padding: 30px 20px 50px
+		& > *
+			margin: 5px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+		&__line
+			display: flex
+			justify-content: flex-end
+			font-size: 16px
+			align-items: baseline
+			&.basket-price--line-total
+				justify-content: space-between
+				max-width: 210px
+				width: 100%
+				.basket-price__line-value
+					font-size: 24px
+					font-weight: 700
+		&__discount
+			font-size: 14px
+			color: #1fa349
+	&-action
+		margin-top: 15px
+		& > *
+			&:not(:last-child)
+				margin-right: 20px

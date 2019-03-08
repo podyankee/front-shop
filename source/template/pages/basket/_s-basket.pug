@@ -7,12 +7,23 @@ mixin orderKitItem(text, count)
 		.order-table__cell.order-table__cell--price
 		.order-table__cell.order-table__cell--total-price
 
-section.s-order
+mixin orderCounter()
+	.order-table__cell.order-table__cell--count
+		.order-product__count
+			.counter.order-product__counter
+				.counter__btn.counter__btn--minus
+					.counter__icon.minus &#8722;
+				.counter__current
+					span.counter__current-text 1
+					span.counter__current-descr шт.
+				.counter__btn.counter__btn.counter__btn--plus
+					.counter__icon.plus &#43;
+
+section.s-basket
 	.container
 		.section-header
-			h1.title-page Заказ № 321-432
-			.order-status.order-status--success Доставлен
-		.order
+			h1.title-page Корзина
+		.basket
 			.order-description
 				span.order-description__text Создан 29 августа 2019г. в 14:23 грн
 				span.order-description__text Выполнен 4 сентября 2019г.
@@ -40,9 +51,7 @@ section.s-order
 										.order-product__line
 											span.order-product__line-label.label-text Артикул
 											span.order-product__line-value 13763515
-								.order-table__cell.order-table__cell--count
-									.order-product__count
-										span.order-product__count-text 10 шт.
+								+orderCounter()
 								.order-table__cell.order-table__cell--price
 									.order-product__price
 										span.order-product__price-old 60000
@@ -50,20 +59,19 @@ section.s-order
 								.order-table__cell.order-table__cell--total-price
 									.order-product__total-price
 										span.order-product__total-price-text 78
+								.order-table__cell.order-table__cell--remove
+									+icon('garbage', 'order-product__remove')
 						.order-product
 							.order-product__main
 								.order-table__cell.order-table__cell--product
 									.order-product__info
 										.order-product__image-wrapper
 											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
-											.order-product__mark.order-product__mark--changed Цена изменена
 										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
 										.order-product__line
 											span.order-product__line-label.label-text Артикул
 											span.order-product__line-value 13763515
-								.order-table__cell.order-table__cell--count
-									.order-product__count
-										span.order-product__count-text 1 шт.
+								+orderCounter()
 								.order-table__cell.order-table__cell--price
 									.order-product__price
 										span.order-product__price-old 66
@@ -71,6 +79,8 @@ section.s-order
 								.order-table__cell.order-table__cell--total-price
 									.order-product__total-price
 										span.order-product__total-price-text 780
+								.order-table__cell.order-table__cell--remove
+									+icon('garbage', 'order-product__remove')
 						.order-product
 							.order-product__main
 								.order-table__cell.order-table__cell--product
@@ -81,9 +91,7 @@ section.s-order
 										.order-product__line
 											span.order-product__line-label.label-text Артикул
 											span.order-product__line-value 13763515
-								.order-table__cell.order-table__cell--count
-									.order-product__count
-										span.order-product__count-text 1 шт.
+								+orderCounter()
 								.order-table__cell.order-table__cell--price
 									.order-product__price
 										span.order-product__price-old
@@ -91,6 +99,8 @@ section.s-order
 								.order-table__cell.order-table__cell--total-price
 									.order-product__total-price
 										span.order-product__total-price-text
+								.order-table__cell.order-table__cell--remove
+									+icon('garbage', 'order-product__remove')
 							.order-product__message
 								+icon('attention', 'order-product__message-icon')
 								span.order-product__message-text Этот товар увеличивает общий срок доставки заказа с 27 ноября до 30 ноября - 4 декабря
@@ -102,14 +112,11 @@ section.s-order
 									.order-product__info
 										.order-product__image-wrapper
 											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
-											.order-product__mark.order-product__mark--removed Удалено
 										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
 										.order-product__line
 											span.order-product__line-label.label-text Артикул
 											span.order-product__line-value 13763515
-								.order-table__cell.order-table__cell--count
-									.order-product__count
-										span.order-product__count-text 10 шт.
+								+orderCounter()
 								.order-table__cell.order-table__cell--price
 									.order-product__price
 										span.order-product__price-old 60000
@@ -117,20 +124,19 @@ section.s-order
 								.order-table__cell.order-table__cell--total-price
 									.order-product__total-price
 										span.order-product__total-price-text 78
+								.order-table__cell.order-table__cell--remove
+									+icon('garbage', 'order-product__remove')
 						.order-product
 							.order-product__main
 								.order-table__cell.order-table__cell--product
 									.order-product__info
 										.order-product__image-wrapper
 											img(src="assets/img/content/products/prev-1.jpg", alt="alt").order-product__image
-											.order-product__mark.order-product__mark--changed Изменено количество
 										a(href="#").link.order-product__name Планка стыковочная 30x30x200 ммб толщина 0.4 мм, цвет графитовый серый RAL 7024
 										.order-product__line
 											span.order-product__line-label.label-text Артикул
 											span.order-product__line-value 13763515
-								.order-table__cell.order-table__cell--count
-									.order-product__count
-										span.order-product__count-text 1 шт.
+								+orderCounter()
 								.order-table__cell.order-table__cell--price
 									.order-product__price
 										span.order-product__price-old 66
@@ -138,6 +144,8 @@ section.s-order
 								.order-table__cell.order-table__cell--total-price
 									.order-product__total-price
 										span.order-product__total-price-text 780
+								.order-table__cell.order-table__cell--remove
+									+icon('garbage', 'order-product__remove')
 					.order-table__block
 						span.order-table__block-title Готовые комплекты
 						.order-product.order-product--show-kit
@@ -152,9 +160,7 @@ section.s-order
 											span.order-product__line-value 13763515
 										.order-product-kit__toggle
 											span.order-product-kit__toggle-text Скрыть состав комплекта
-								.order-table__cell.order-table__cell--count
-									.order-product__count
-										span.order-product__count-text 10 шт.
+								+orderCounter()
 								.order-table__cell.order-table__cell--price
 									.order-product__price
 										span.order-product__price-old 60000
@@ -162,6 +168,8 @@ section.s-order
 								.order-table__cell.order-table__cell--total-price
 									.order-product__total-price
 										span.order-product__total-price-text 78
+								.order-table__cell.order-table__cell--remove
+									+icon('garbage', 'order-product__remove')
 							.order-product-kit__hide
 								+orderKitItem('Желоб полукруглый, 125ммб 3м, RAL9003', '2 шт')
 								+orderKitItem('Заглушка торц. универс., 125мм, 3м, RAL900', '1шт')
@@ -169,54 +177,21 @@ section.s-order
 								+orderKitItem('Заглушка торц. универс., 125мм, 3м, RAL900', '1шт')
 								+orderKitItem('Желоб полукруглый, 125ммб 3м, RAL9003', '2 шт')
 								+orderKitItem('Заглушка торц. универс., 125мм, 3м, RAL900', '1шт')
-					.order-price
-						.order-price__line
-							span.order-price__line-label Стоимость товаров:
-							span.order-price__line-value 8900  фун.
-						.order-price__line
-							span.order-price__line-label Стоимость доставки:
-							span.order-price__line-value 3000  фун.
-						.order-price__line.order-price__line--total
-							span.order-price__line-label Итого:
-							span.order-price__line-value 11920  фун.
-						span.order-price__descr Цены актуальны до 6 сентября 2019 г. в 02:54 грн.
-				.order-table__footer
-					.order-info
-						.order-info__col
-							span.order-info__title Контактное лицо
-							.order-info__body
-								.order-info__block
-									.order-info__line
-										span.order-info__text Вениамин Константинопольский
-									.order-info__line
-										span.order-info__text +8 921 9587019
-									.order-info__line
-										span.order-info__text mail@projectorat.en
-						.order-info__col.order-info__col--wide
-							span.order-info__title Способ получения
-							.order-info__body
-								.order-info__block
-									.order-info__line
-										span.order-info__text Адрес: Англия, Лондон, Королевская набережная, 14
-									.order-info__line
-										span.order-info__text Доставка по Лондону 21-23 августа
-										span.descr-text Актуально при оплате сегодня до 15:00 грн. (осталось 2 часа 11 минут)
-								.order-info__block
-									.order-info__line
-										span.order-info__text Приготовьте доверенность на получение товара.
-										a(href="#")
-											+icon('pdf', 'link-icon')
-											| Инструкция по разгрузке
-						.order-info__col
-							span.order-info__title Оплата
-							.order-info__body
-								.order-info__block
-									.order-info__line
-										span.order-info__text Выставлен счет
-									.order-info__line
-										span.order-info__text Оплатить заказ можно после подтвержедния менеджером
-					.helper
-						span.helper__title Вам понравился заказ?
-						span.helper__info Оставьте отзыв о заказе и напишите что вам понравилось
-						button.btn.btn--border-green.btn--transparent-green Оставить отзыв о заказе
-
+					.basket-price
+						.basket-price__line.basket-price__line--total
+							span.basket-price__line-label Итого:
+							span.basket-price__line-value 11 920 фун.
+						.basket-price__line
+							span.basket-price__discount Ваша скидка #[b 2000 фун.]
+						.basket-price__line
+							.descr-text Цены актуальны в течение 48 часов с момента заказа
+						.basket-action
+							a(href="#").btn.btn--border-yellow Оформить заказ без регистрации
+							a(href="#").btn Перейти к оформлению заказа
+				.helper
+					span.helper__title Возникли вопррросы по оформлению заказа?
+					.helper__row
+						.helper__col
+							a(href="#popup-consultation").js-popup-link.btn.btn--border-green.btn--transparent-green Получить консультацию
+						.helper__col
+							p.helper__text Также получить ответы на вопросы можно по телефону #[a(href="tel:+84993348888")  +8 499 334-88-88] (круглосуточно)
