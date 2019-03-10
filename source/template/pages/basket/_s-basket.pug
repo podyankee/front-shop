@@ -24,6 +24,13 @@ section.s-basket
 		.section-header
 			h1.title-page Корзина
 		.basket
+			.basket-add
+				input(placeholder="Быстрое добавление: введите название товара или артикул").basket-add__input.input-field
+				.basket-add__body
+					each prod in [1,2,3,4]
+						.basket-add-product
+							span.basket-add-product__name Планка стыковочная 30x20x3000 мм, толщина 0.4 мм
+							span.count-text 365 фун. за шт.
 			.order-description
 				span.order-description__text Создан 29 августа 2019г. в 14:23 грн
 				span.order-description__text Выполнен 4 сентября 2019г.

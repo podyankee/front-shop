@@ -284,3 +284,27 @@
 		& > *
 			&:not(:last-child)
 				margin-right: 20px
+	&-add
+		max-width: 420px
+		position: relative
+		&.basket-add--active
+			.basket-add
+				&__input
+					border-radius: 4px 4px 0 0
+					border-color: $action-color
+				&__body
+					display: block
+		&__body
+			border: 1px solid $action-color
+			border-radius: 0 0 4px 4px
+			+abs-pos (calc(100% - 1px), 0, auto, 0)
+			z-index: 1
+			background-color: $white
+			display: none
+		&-product
+			display: flex
+			flex-direction: column
+			padding: 10px 15px
+			cursor: pointer
+			&:hover
+				background-color: $action-color

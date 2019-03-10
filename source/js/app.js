@@ -410,6 +410,27 @@ var orderKitToggle = function () {
 	});
 };
 
+var fastAdd = function () {
+	var searchField = $('.basket-add__input');
+	searchField.keyup(function () {
+		if ($(this).val().length > 2) {
+			$(this).parent().addClass('basket-add--active');
+		} else {
+			$(this).parent().removeClass('basket-add--active');
+		}
+	});
+	searchField.blur(function () {
+		if ($(this).val().length > 2) {
+			$(this).parent().removeClass('basket-add--active');
+		}
+	});
+	searchField.focus(function () {
+		if ($(this).val().length > 2) {
+			$(this).parent().addClass('basket-add--active');
+		}
+	});
+};
+
 
 	sandwich();
 	popularCategoriesSlider();
@@ -433,6 +454,7 @@ var orderKitToggle = function () {
 	customSelect();
 	tabsToggle();
 	orderKitToggle();
+	fastAdd();
 	});
 
 
