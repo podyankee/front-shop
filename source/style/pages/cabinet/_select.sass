@@ -1,18 +1,23 @@
 .select
 	position: relative
 	background-color: $white
-	&.select--active
-		.select
-			&__header
-				border-radius: 4px 4px 0 0
-				border-color: $action-color
-			&__body
-				display: block
-				border-color: $action-color
+	&.select
+		&--active
+			.select
+				&__header1
+					border-radius: 4px 4px 0 0
+					border-color: $action-color
+				&__body
+					display: block
+					border-color: $action-color
+		&--height-m
+			font-size: 14px
+			&::before
+				top: 17px
 	&__header
 		border: 1px solid $input-border-color
 		border-radius: 4px
-		padding: 15px
+		padding: 15px 30px 15px 15px
 		font-size: 16px
 		cursor: pointer
 		position: relative
@@ -38,3 +43,8 @@
 		& > *
 			&:not(:last-child)
 				margin-right: 5px
+	&__current
+		display: block
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis

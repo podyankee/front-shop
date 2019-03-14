@@ -5,8 +5,7 @@
 .breadcrumbs
 	display: flex
 	align-items: center
-	overflow-x: auto
-	overflow-y: hidden
+	flex-wrap: wrap
 	font-size: 12px
 	&__icon
 		+dem(17px)
@@ -15,6 +14,7 @@
 		display: flex
 		align-items: center
 		white-space: nowrap
+		margin-bottom: 5px
 		&:hover
 			.breadcrumbs-tooltip
 				display: block
@@ -40,7 +40,7 @@
 		padding-right: 20px
 		cursor: pointer
 		&:before
-			+arr(10, 5, $base-text-color, b)
+			+arr(8, 4, $base-text-color, b)
 			content: ''
 			display: block
 			position: absolute
@@ -87,7 +87,7 @@
 		padding-right: 20px
 		color: $base-text-color
 		&:before
-			+arr(10, 5, $base-text-color, b)
+			+arr(8, 4, $base-text-color, b)
 			content: ''
 			display: block
 			position: absolute
@@ -96,5 +96,5 @@
 		&:hover
 			color: $breadcrumbs-link-hover
 			&:before
-				+arr(10, 5,$breadcrumbs-link-hover, b)
+				+arr(8, 4,$breadcrumbs-link-hover, b)
 

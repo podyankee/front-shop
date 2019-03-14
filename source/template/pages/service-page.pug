@@ -1,0 +1,17 @@
+extends ../_template
+
+block variables
+	- var title = 'Страница услуги'
+	- var pageClass = 'product-page'
+
+block content
+	//include ../elements/_debug
+	include ../elements/_preloader
+	include ../common/_header
+	include service-page/_service-breadcrumbs
+	include service-page/_s-service
+	include index-page/_you-see
+	include index-page/_questions
+	include ../common/_footer
+	include ../elements/popups/_popups
+block script
