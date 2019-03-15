@@ -357,7 +357,7 @@ var tagsToggle = function () {
 var dropdown = function () {
 	$(document).on('click', '.dropdown__toggle', function () {
 		var dropdown = $(this).parent();
-		dropdown.toggleClass('dropdown--show')
+		dropdown.toggleClass('dropdown--show');
 	});
 	if($(window).width() > 768) {
 		$('body').click(function (e) {
@@ -403,9 +403,9 @@ var orderKitToggle = function () {
 			textElement = $(this).find('.order-product-kit__toggle-text');
 		par.toggleClass('order-product--show-kit');
 		if (par.hasClass('order-product--show-kit')) {
-			textElement.text('Скрыть состав комплекта')
+			textElement.text('Скрыть состав комплекта');
 		} else {
-			textElement.text('Показаь состав комплекта')
+			textElement.text('Показаь состав комплекта');
 		}
 	});
 };
@@ -428,6 +428,39 @@ var fastAdd = function () {
 		if ($(this).val().length > 2) {
 			$(this).parent().addClass('basket-add--active');
 		}
+	});
+};
+
+var productColorSelect = function () {
+	$(document).on('click', '.product-color', function () {
+		if(!$(this).hasClass('product-color--all')) {
+			if ($(this).hasClass('product-color--active')) {
+				$(this).removeClass('product-color--active');
+			} else {
+				$(this).addClass('product-color--active');
+				$(this).siblings().removeClass('product-color--active');
+			}
+		}
+	});
+};
+
+var productSlider = function () {
+	$('.js-product-slider-main').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.js-product-slider-aside'
+	});
+	$('.js-product-slider-aside').slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		asNavFor: '.js-product-slider-main',
+		focusOnSelect: true,
+		vertical: true,
+		infinite: false,
+		prevArrow: '.product-slider-aside__nav--prev',
+		nextArrow: '.product-slider-aside__nav--next'
 	});
 };
 
@@ -455,6 +488,8 @@ var fastAdd = function () {
 	tabsToggle();
 	orderKitToggle();
 	fastAdd();
+	productColorSelect();
+	productSlider();
 	});
 
 

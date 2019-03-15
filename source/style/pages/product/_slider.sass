@@ -1,0 +1,51 @@
+.product-slider-aside__item
+	img
+		+dem(75px, 45px)
+.product-slider
+	&-wrapper
+		display: flex
+		overflow: hidden
+		& > *
+			&:not(:last-child)
+				margin-right: 20px
+	&-aside
+		flex: 0 0 75px
+		width: 75px
+		&__item
+			border: 1px solid $input-border-color
+			border-radius: 4px
+			overflow: hidden
+			&.slick-current
+				border-color: $action-color
+		&__nav
+			cursor: pointer
+			display: flex
+			align-items: center
+			justify-content: cente
+			+dem(75px,40px)
+			&.slick-disabled
+				opacity: 0
+			&.product-slider-aside__nav
+				&--prev
+					&::before
+						+arr(29, 13, $black, b)
+						content: ''
+						display: block
+				&--next
+					&::before
+						+arr(29, 13, $black, t)
+						content: ''
+						display: block
+	&-main
+		flex: 1
+		overflow: hidden
+		border: 1px solid $input-border-color
+		border-radius: 4px
+		margin: 40px 0
+		padding: 10px
+		&__item
+			img
+				+dem(150px)
+				max-width: 100%
+				display: block
+				margin: 0 auto

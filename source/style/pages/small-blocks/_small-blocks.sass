@@ -27,6 +27,26 @@
 		flex: 0 0 90px
 		width: 90px
 		padding: 0 10px
+		text-align: center
+		justify-content: center
 		& > *
 			&:not(:last-child)
 				margin-right: 5px
+	&.counter
+		&--width
+			&-fill
+				.counter__current
+					flex: 1
+					width: auto
+.action-width-icon
+	display: flex
+	flex-direction: column
+	position: relative
+	padding-left: 35px
+	&__icon
+		+dem(25px)
+		+abs-pos(0, auto, auto, 0)
+		fill: $button-green
+	.link-underline
+		margin-bottom: 2px
+		font-size: 14px

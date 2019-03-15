@@ -1,0 +1,42 @@
+mixin productInfoPrice(price, descr)
+	.product-info-price
+		span.product-info-price__number=price
+				|#[sup 2]
+		span.count-text=descr
+				|#[sup 2]
+
+.product__body
+	include _slider
+	.product-info
+		.product-details
+			.product-item
+				.product-item__title Цена
+				+productInfoPrice('190 фун за м', '25-100 м')
+				+productInfoPrice('174 фун за м', '101-500 м')
+				+productInfoPrice('167 фун за м', '501-2000 м')
+			.product-item
+				.product-item__title Срок выполнения
+				.product-item__text от 3 дней
+			.product-item
+				.action-width-icon
+					+icon('phone', 'action-width-icon__icon')
+					a(href="#popup-consultation").js-popup-link.link-underline Получить консультацию
+					span.descr-text Ответим в течение 10 минут
+		.product-count
+			span.product-count__title Количество
+			.counter.counter--width-fill.product-count__counter
+				.counter__btn.counter__btn--minus
+					.counter__icon.minus &#8722;
+				.counter__current
+					span.counter__current-text 1
+					span.counter__current-descr м #[sup 2]
+				.counter__btn.counter__btn.counter__btn--plus
+					.counter__icon.plus &#43;
+			.product-count__price
+				span.product-count__price-text Итого:
+				span.product-count__price-number 4750 фун.
+			.product-count__buttons
+				a(href="#").link.btn Купить в один клик
+				button.btn.btn--border-yellow.btn--fill
+					+icon('shopping-cart', 'btn__icon')
+					span В корзину
