@@ -1,0 +1,52 @@
+mixin productColor(color,code,price)
+	.product-color
+		.product-color__prev(style=`background-color: #${color}`)
+		span.product-color__code=code
+		span.product-color__price=price
+
+
+.product-options
+	.product-options__item.product-options__item--width-l
+		.form-group
+			.form-group__header
+				.form-group__label Изделия
+			.form-group__body
+				.select
+					.select__header
+						span.select__current Плоские металлические изделия габаритами 71
+						.select__input
+							input.input-field(type="text", name="select-field")
+					.select__body
+						ul.select__list
+							li.select__item
+								span.select__value Плоские металлические
+							li.select__item
+								span.select__value Плоские деревянные
+							li.select__item
+								span.select__value Плоские металлические изделия габаритами 71
+	.product-options__item.product-options__item--width-s
+		.form-group
+			.form-group__header
+				.form-group__label Тип краски
+			.form-group__body
+				.select.select--height-m
+					.select__header
+						span.select__current 0,45 мм
+						.select__input
+							input.input-field(type="text", name="select-field")
+					.select__body
+						ul.select__list
+							li.select__item
+								span.select__value 0,45 мм
+							li.select__item
+								span.select__value 0,10 мм
+	.product-options__item.product-options__item--width-fill
+		.product-colors
+			+productColor('417505', '3016', '45 фун')
+			+productColor('a31123', '3016', '82 фун')
+			+productColor('f8e71c', '3016', '45 фун')
+			+productColor('f5a623', '3016', '78 фун')
+			+productColor('2a153c', '3016', '90 фун')
+			.product-color.product-color--all
+				a(href="#popup-colors-catalog").link-green.link-underline.js-popup-link Все цвета
+					span.count-text 299

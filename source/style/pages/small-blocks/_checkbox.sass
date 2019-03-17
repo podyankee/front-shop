@@ -1,21 +1,21 @@
-.checkbox 
+.checkbox
 	cursor: pointer
 	display: block
 	padding-left: 25px
 	position: relative
 	user-select: none
-	input 
+	input
 		cursor: pointer
 		opacity: 0
 		position: absolute
-		&:checked 
-			& ~ .checkbox__custom 
+		&:checked
+			& ~ .checkbox__custom
 				background: $action-color
 				border-color: $action-color
-				&:after 
+				&:after
 					display: block
 					border-color: $black
-	&__custom 
+	&__custom
 		@include dem(16px)
 		background-color: $white
 		border: 1px solid #ededed
@@ -23,7 +23,7 @@
 		left: 0
 		position: absolute
 		top: 0
-		&:after 
+		&:after
 			content: ''
 			border: solid $white
 			border-width: 0 2px 2px 0
@@ -34,7 +34,7 @@
 			top: 0
 			transform: rotate(45deg)
 			width: 6px
-	&__text 
+	&__text
 		font-size: 14px
 		line-height: 18px
 	&__body
@@ -44,8 +44,15 @@
 				margin-right: 10px
 		.color-block
 			margin-top: 3px
-			&.color-block--big
-				margin-top: 0
+			&.color-block
+				&--big
+					margin-top: 0
+				&--m
+					+dem(20px)
+				&--l
+					+dem(24px)
+				&--xxl
+					+dem(160px)
 	&.checkbox--bold
 		.checkbox__text
 			font-weight: 600
@@ -56,5 +63,5 @@
 .color-block
 	+dem(12px)
 	display: block
-	
+
 

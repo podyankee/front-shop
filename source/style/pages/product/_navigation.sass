@@ -1,0 +1,17 @@
+.product-nav
+	&__list
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 30px
+	&__item
+		padding: 10px 0
+	&__link
+		border-bottom: 1px dashed $link-color
+		display: flex
+		align-items: baseline
+	&__text
+		color: $link-color
+		font-size: 12px
+		letter-spacing: 0.6
+		text-transform: uppercase

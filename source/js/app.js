@@ -464,6 +464,17 @@ var productSlider = function () {
 	});
 };
 
+var accordion = function () {
+	$(document).on('click', '.accordion-item', function () {
+		if ($(this).hasClass('accordion-item--active')) {
+			$(this).removeClass('accordion-item--active');
+		} else {
+			$(this).siblings().removeClass('accordion-item--active');
+			$(this).addClass('accordion-item--active');
+		}
+	});
+};
+
 
 	sandwich();
 	popularCategoriesSlider();
@@ -490,6 +501,7 @@ var productSlider = function () {
 	fastAdd();
 	productColorSelect();
 	productSlider();
+	accordion();
 	});
 
 

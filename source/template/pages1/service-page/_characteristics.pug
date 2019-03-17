@@ -1,0 +1,44 @@
+mixin productCharLine(label,value)
+	.product-characteristics__line
+		.product-characteristics__label
+			span.product-characteristics__label-text=label
+		.product-characteristics__value
+			span.product-characteristics__text=value
+
+
+section.s-characteristics.s-bg-white
+	.container
+		.section-header
+			h4.title-smaller Характеристики порошковой краски
+		.product-characteristics
+			.product-characteristics__item
+				span.product-characteristics__title Основные
+				+productCharLine('Материал','Оцинкованная сталь с полимерным покрытием')
+				+productCharLine('Толщина металла', '0.4 мм')
+				+productCharLine('Высота', '30 мм')
+				+productCharLine('Длина', '2000 мм')
+				+productCharLine('Угол сгиба', '45' + String.fromCharCode(176))
+				+productCharLine('Вес', '0.2 кг')
+				+productSmallCharacteristicsLine('Применение', 'Для кровли из металлочерепицы,для профнастила,для фальца,для мягкой(гибкой,битумной) черепицы')
+			.product-characteristics__item
+				span.product-characteristics__title Дополнительные
+				.product-characteristics__line
+					.product-characteristics__label Цвет
+					.product-characteristics__value
+						span.product-characteristics__text
+				+productCharLine('Расцветка','Графитовый серый')
+				+productCharLine('Оттенок', 'RAL 7024')
+				+productCharLine('Изготовление', 'от 2 до 5 дней')
+				+productCharLine('Срок службы', '25 лет')
+				+productCharLine('Гарантия', '5 лет')
+			.product-characteristics__item
+				span.product-characteristics__title Еще блок схарактеристиками
+				.product-characteristics__line
+					.product-characteristics__label Цвет
+					.product-characteristics__value
+						span.product-characteristics__text
+				+productCharLine('Расцветка','Графитовый серый')
+				+productCharLine('Оттенок', 'RAL 7024')
+				+productCharLine('Изготовление', 'от 2 до 5 дней')
+				+productCharLine('Срок службы', '25 лет')
+				+productCharLine('Гарантия', '5 лет')

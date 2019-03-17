@@ -1,0 +1,48 @@
+.product
+	&-col
+		&.product-col
+			&--big
+				max-width: 805px
+.accordion
+	&-item
+		border: 1px solid $input-border-color
+		border-bottom: 0
+		&.accordion-item
+			&--active
+				border-color: $action-color
+				.accordion-item
+					&__body
+						display: block
+					&__header
+						&::after
+							transform: rotate(180deg)
+				&:not(:last-child)
+					& + .accordion-item
+						border-top-color: $action-color
+				&:last-child
+					border-bottom-color: $action-color
+
+		&:first-child
+			border-style: 4px 4px 0 0
+		&:last-child
+			border-bottom: 1px solid $input-border-color
+			border-radius: 0 0 4px 4px
+		&__header
+			padding: 20px 50px 20px 30px
+			position: relative
+			cursor: pointer
+			&::after
+				content: ''
+				display: block
+				+arr(16, 8, $black, b)
+				+abs-pos(50%,20px)
+				transform: translateY(-50%)
+		&__name
+			font-size: 20px
+			font-weight: 600
+		&__body
+			display: none
+			padding: 0 30px 20px
+		&__text
+			font-size: 14px
+			line-height: 18px

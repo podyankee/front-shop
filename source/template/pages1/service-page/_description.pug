@@ -1,0 +1,36 @@
+mixin productSmallCharacteristicsLine(label, value)
+	.product-characteristics-small__line
+		span.product-characteristics-small__label=label
+		.product-characteristics-small__value=value
+
+section.s-product-description
+	.container
+		.product-description
+			.product-description__main
+				p.text Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности требуют определения и уточнения дальнейших направлений развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации форм развития. Задача организации, в особенности же сложившаяся структура организации играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. С другой стороны начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации дальнейших направлений развития.
+				p.text Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание направлений прогрессивного развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Разнообразный и богатый опыт рамки и место обучения кадров способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации модели развития.
+				.helper
+					.helper__row
+						.helper__col
+							a(href="#popup-consultation").js-popup-link.btn.btn--border-green.btn--transparent-green Получить консультацию
+							span.descr-text.helper__info ответим в течение 10 минут
+						.helper__col
+							p.helper__text Также получить ответы на вопросы можно по телефону #[a(href="tel:+84993348888")  +8 499 334-88-88] (круглосуточно)
+			.product-characteristics-small
+				+productSmallCharacteristicsLine('Материал', 'Оцинкованная сталь с полимерным покрытием')
+				+productSmallCharacteristicsLine('Толщина металла', '0.4 мм')
+				+productSmallCharacteristicsLine('Высота', '30 мм')
+				+productSmallCharacteristicsLine('Длина', '2000 мм')
+				+productSmallCharacteristicsLine('Угол сгиба', '45' + String.fromCharCode(176))
+				+productSmallCharacteristicsLine('Вес', '0.2 кг')
+				.product-characteristics-small__line
+					span.product-characteristics-small__label Цвет
+					.product-characteristics-small__value
+						.color-block.color-block-m(style="background-color:#9b9b9b")
+						span.product-characteristics-small__value-text Серый
+				+productSmallCharacteristicsLine('Применение', 'Для кровли из металлочерепицы,для профнастила,для фальца,для мягкой(гибкой,битумной) черепицы')
+				.product-characteristics-small__all
+					a(href="#").product-characteristics-small__all-link
+						span.product-characteristics-small__all-text Все характеристики
+						span.count-text 17
+
