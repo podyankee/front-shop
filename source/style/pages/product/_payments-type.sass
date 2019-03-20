@@ -1,0 +1,49 @@
+.product-payment-type
+	max-width: 500px
+	& > *
+		margin: 20px 0
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+	&__item
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&-line
+		display: flex
+		font-size: 18px
+		line-height: 1.44
+		& > *
+			&:not(:last-child)
+				margin-right: 20px
+		&__icon
+			+dem(25px)
+	&-steps
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+	&-step
+		display: flex
+		align-items: center
+		& > *
+			&:not(:last-child)
+				margin-right: 15px
+		&__text
+			font-size: 14px
+			line-height: 18px
+		&__number
+			&-wrapper
+				+dem(35px)
+				display: flex
+				align-items: center
+				flex-shrink: 0
+				justify-content: center
+				border: 1px solid $action-color
+				border-radius: 50%

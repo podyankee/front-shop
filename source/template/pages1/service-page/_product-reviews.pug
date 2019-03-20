@@ -1,0 +1,117 @@
+mixin productReview(number,width,count)
+	.product-reviews-static__line
+		.product-reviews-static__star
+		span.product-reviews-static__line-number=number
+		.product-reviews-static__way
+			.product-reviews-static__way-current(style=`width:${width}%`)
+		span.product-reviews-static__count=count
+
+mixin sortItem(title, descr)
+	.sort-action__item
+		span.sort-action__name=title
+		if(descr)
+			span.sort-action__description=descr
+
+section.s-product-reviews
+	.container
+		.section-header
+			h4.title-smaller Отзывы о порошковой краске
+			span.count-text.count-text--size-l 20
+		.product-reviews
+			.product-col.product-col--big
+				.product-reviews__header
+					.sort
+						.sort-item
+							span.sort-item__title Упорядочить
+							.sort-action
+								.sort-action__header
+									span.sort-action__current подате публикации
+								.sort-action__body
+									+sortItem('по дате публикации')
+									+sortItem('по популярности')
+					.page-counter
+						span.page-counter__text Страница
+						span.page-counter__text #[b  1] из 7
+				.product-reviews__list
+					.product-review
+						.product-review__header
+							.product-rating
+								.product-rating__body
+									.product-rating__star.product-rating__star--full
+									.product-rating__star.product-rating__star--full
+									.product-rating__star.product-rating__star--full
+									.product-rating__star
+									.product-rating__star
+								span.product-rating__text #[b 3] из 5
+							.product-review__author
+								span.product-review__author-text Пантелеймон Константинопольский
+								a(href="#").product-review__author-link
+									+icon('vk-icon','product-review__author-icon')
+						.product-review__body
+							p.product-review__text С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание соответствующий условий активизации. С другой стороны начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия.
+							.popup-gallery.product-review__gallery
+								a.product-review__gallery-item(href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg")
+									img.product-review__gallery-img(src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg")
+								a.product-review__gallery-item(href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg")
+									img.product-review__gallery-img(src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_s.jpg")
+						.product-review__footer
+							span.descr-text-medium 20 июля 2019 г.
+					.product-review
+						.product-review__header
+							.product-rating
+								.product-rating__body
+									.product-rating__star.product-rating__star--full
+									.product-rating__star.product-rating__star--full
+									.product-rating__star.product-rating__star--full
+									.product-rating__star.product-rating__star--full
+									.product-rating__star
+								span.product-rating__text #[b 4] из 5
+							.product-review__author
+								span.product-review__author-text Иванова Мария
+								a(href="#").product-review__author-link
+									+icon('vk-icon','product-review__author-icon')
+						.product-review__body
+							a.js-popup-link.video-block(href="#popup-video-review", style="background-image:url('assets/img/content/actions/actions-prev-2.jpeg')")
+								+icon('eye', 'video-block__icon')
+						.product-review__footer
+							span.descr-text-medium 20 июля 2019 г.
+					.product-review
+						.product-review__header
+							.product-rating
+								.product-rating__body
+									.product-rating__star.product-rating__star--full
+									.product-rating__star.product-rating__star--full
+									.product-rating__star.product-rating__star--full
+									.product-rating__star
+									.product-rating__star
+								span.product-rating__text #[b 3] из 5
+							.product-review__author
+								span.product-review__author-text Пантелеймон Константинопольский
+								a(href="#").product-review__author-link
+									+icon('vk-icon','product-review__author-icon')
+						.product-review__body
+							p.product-review__text Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа форм развития. Равным образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание форм развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание модели развития.
+							.popup-gallery.product-review__gallery
+								a.product-review__gallery-item(href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg")
+									img.product-review__gallery-img(src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg")
+								a.product-review__gallery-item(href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg")
+									img.product-review__gallery-img(src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_s.jpg")
+								a.product-review__gallery-item(href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg")
+									img.product-review__gallery-img(src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_s.jpg")
+						.product-review__footer
+							span.descr-text-medium 20 июля 2019 г.
+				.pagination
+					ul.pagination__list
+						each page in [1,2,3,4,5]
+							li.pagination__item
+								a(href="#").pagination__link=page
+			.product-col.product-col--small
+				.product-reviews-static
+					span.product-reviews-static__title Статистика оценок
+					.product-reviews-static__lines
+						+productReview('5','60','16')
+						+productReview('4','40','9')
+						+productReview('3','10','12')
+						+productReview('2','0','0')
+						+productReview('1','0','0')
+					a(href="#").btn.btn--border-green Добавить отзыв

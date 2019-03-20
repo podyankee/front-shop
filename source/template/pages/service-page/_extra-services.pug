@@ -1,5 +1,42 @@
-section.s-product-extra-sevices
+mixin extraService(name, descr, price)
+	.product-extra-service
+		.table__row
+			.table__cell.table__cell--extra-service-name
+				span.product-extra-service__text=name
+			.table__cell.table__cell--extra-service-descr
+				span.product-extra-service__text=descr
+			.table__cell.table__cell--extra-service-price
+				span.product-extra-service__text=price
+			.table__cell.table__cell--extra-service-question
+				a(href="#popup-consultation").js-popup-link.link-underline Задать вопрос
+
+section.s-product-extra-sevices.s-bg-white.s-border-bottom
 	.container
 		.section-header
 			h4.title-smaller Дополнительные услуги при заказе порошковой покраски плоских металлических изделий
 		.product-extra-services
+			.table
+				.table__header
+					.table__row
+						.table__cell.table__cell--extra-service-name
+							span.table__cell-name Наименование услуги
+						.table__cell.table__cell--extra-service-descr
+							span.table__cell-name Ед. измерения
+						.table__cell.table__cell--extra-service-price
+							span.table__cell-name Цена, фун.
+						.table__cell.table__cell--extra-service-question
+				.table__body
+					+extraService('Зачистка поверхности полная', 'м²/шт' , '38')
+					+extraService('Зачистка поверхности частичная', 'м²/шт' , '38')
+					+extraService('Сверление отверстий', 'шт' , '15')
+					+extraService('Термическая обработка промасленного металла перед покраской', 'м²/шт' , '38')
+					.product-extra-services__hidden
+						+extraService('Зачистка поверхности полная', 'м²/шт' , '38')
+						+extraService('Зачистка поверхности частичная', 'м²/шт' , '38')
+						+extraService('Сверление отверстий', 'шт' , '15')
+						+extraService('Термическая обработка промасленного металла перед покраской', 'м²/шт' , '38')
+					.product-extra-services__footer
+						.btn-show-more.product-extra-services__toggle
+							span.btn-show-more__text Показать еще 15 услуг
+						span.descr-text-medium Цены обновлены 29.06.2018
+

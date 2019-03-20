@@ -475,6 +475,56 @@ var accordion = function () {
 	});
 };
 
+var productExtraServices = function () {
+	$(document).on('click', '.product-extra-services__toggle', function () {
+		$(this).closest('.product-extra-services').addClass('product-extra-services--active');
+	});
+};
+
+var popupGallery = function () {
+	$('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1]
+		},
+		image: {}
+	});
+};
+
+var scrollToElement = function () {
+	$('.scroll-link')
+		.not('[href="#"]')
+		.not('[href="#0"]')
+		.click(function (event) {
+			if (
+				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+				&&
+				location.hostname == this.hostname
+			) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					event.preventDefault();
+					$('html, body').animate({
+						scrollTop: target.offset().top - 50
+					}, 1000, function () {
+						var $target = $(target);
+						$target.focus();
+						if ($target.is(":focus")) {
+							return false;
+						} else {
+							$target.attr('tabindex', '-1');
+							$target.focus();
+						}
+						;
+					});
+				}
+			}
+		});
+};
 
 	sandwich();
 	popularCategoriesSlider();
@@ -502,6 +552,9 @@ var accordion = function () {
 	productColorSelect();
 	productSlider();
 	accordion();
+	productExtraServices();
+	popupGallery();
+	scrollToElement();
 	});
 
 

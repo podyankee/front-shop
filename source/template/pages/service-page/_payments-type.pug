@@ -1,0 +1,33 @@
+section.s-product-payment-type.s-bg-white
+	.container
+		.section-header
+			h4.title-smaller Способы оплаты порошковой краски
+		.product-payment-type
+			.product-payment-type__item
+				.product-payment-type-line
+					+icon('list', 'product-payment-type-line__icon')
+					span.product-payment-type-line__text Выставление счета
+				.product-payment-type-line
+					+icon('credit-card', 'product-payment-type-line__icon')
+					span.product-payment-type-line__text Банковская карта (для заказа меньше 20 000 фунтов)
+			.product-payment-type__item
+				.product-payment-type-step
+					.product-payment-type-step__number-wrapper
+						span.product-payment-type-step__number 1
+					span.product-payment-type-step__text Уточните цену по телефону или уточните предварительный расчет стоимости заказа на сайте.
+				.product-payment-type-step
+					.product-payment-type-step__number-wrapper
+						span.product-payment-type-step__number 2
+					span.product-payment-type-step__text Сделайте заказ.
+				.product-payment-type-step
+					.product-payment-type-step__number-wrapper
+						span.product-payment-type-step__number 3
+					span.product-payment-type-step__text Менеджер по электронной почте пришлет вам счет или квитанцию для оплаты.
+			.helper
+				span.helper-title Возникли сложности или вопросы при оплате
+				.helper__row
+					.helper__col
+						a(href="#popup-consultation").js-popup-link.btn.btn--transparent-with-border-green Получить консультацию
+						span.descr-text.helper__info ответим в течение 10 минут
+					.helper__col
+						p.helper__text Также получить ответы на вопросы можно по телефону #[a(href="tel:+84993348888")  +8 499 334-88-88] (круглосуточно)

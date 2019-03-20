@@ -1,4 +1,37 @@
-.s-product-extra-sevices.s-bg-white
-	.section-header
-		.product-extra-sevices
+.s-product-extra-sevices
+	.section-header, .product-extra-services
 		max-width: 725px
+.product-extra-services
+	&__footer
+		display: flex
+		justify-content: space-between
+		padding: 10px 0
+	&__hidden
+		display: none
+	&.product-extra-services--active
+		.product-extra-services
+			&__hidden
+				display: block
+.product-extra-service
+	border-bottom: 1px solid $input-border-color
+	font-size: 18px
+	line-height: 1.44
+.table
+	&__cell
+		&.table__cell--extra-service
+			&-name
+				flex: 1
+			&-descr
+				flex: 0 0 115px
+				width: 115px
+			&-price
+				flex: 0 0 70px
+				width: 70px
+				text-align: center
+			&-question
+				flex: 0 0 140px
+				width: 140px
+				text-align: right
+				font-size: 14px
+				line-height: 18px
+				l

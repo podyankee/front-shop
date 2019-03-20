@@ -1,0 +1,128 @@
+.s-product-reviews
+	.section-header
+		align-items: flex-end
+.product-questions
+	display: flex
+	& > *
+		&:not(:last-child)
+			margin-right: 20px
+	&-add
+		background: $white
+		border-radius: 4px
+		padding: 20px
+	.product-col--small
+		padding-top: 60px
+.helper
+	max-width: 550px
+	width: 100%
+	&.helper
+		&--mode
+			&-column
+				display: flex
+				flex-direction: column
+				.helper
+					&__info
+						margin-top: 5px
+					&__description
+						margin-bottom: 5px
+					&__text
+						margin-top: 15px
+.product-reviews
+	display: flex
+	& > *
+		&:not(:last-child)
+			margin-right: 20px
+	.product-col--small
+		padding-top: 68px
+	&-static
+		background-color: $white
+		border-radius: 4px
+		padding: 20px
+		&__title
+			display: block
+			font-size: 18px
+			line-height: 1.44
+			margin-bottom: 5px
+		&__lines
+			margin-bottom: 20px
+			& > *
+				margin: 10px 0
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
+		&__line
+			display: flex
+			align-items: center
+			font-size: 14px
+			line-height: 18px
+			& > *
+				flex: 0 0 auto
+				&:not(:last-child)
+					margin-right: 5px
+		&__star
+			&::after
+				content: '\2605'
+				color: $action-color
+		&__way
+			flex: 1
+			height: 13px
+			background-color: #ededed
+			position: relative
+			&-current
+				background-color: $action-color
+				+abs-pos(0, auto, 0, 0)
+				z-index: 1
+.product-reviews
+	&__header
+		display: flex
+		justify-content: space-between
+		background-color: $white
+		border-radius: 4px
+	&__list
+		background-color: $white
+		border-radius: 4px
+
+.product-review
+	padding: 20px
+	font-size: 14px
+	border-bottom: 1px solid $input-border-color
+	&:last-child
+		border-bottom: none
+	& > *
+		margin: 20px 0
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+	&__header
+		display: flex
+		align-items: baseline
+		& > *
+			&:not(:last-child)
+				margin-right: 15px
+	&__author
+		display: flex
+		align-items: center
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+		&-icon
+			+dem(20px)
+		&-text
+			font-weight: 600
+	&__gallery
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+		&-item
+			border-radius: 4px
+			overflow: hidden
+			margin-top: 10px
+			height: 45px
+			width: 75px
+		&-img
+			max-width: 100%
+	.video-block
+		max-width: 380px

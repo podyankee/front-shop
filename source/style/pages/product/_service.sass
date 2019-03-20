@@ -164,9 +164,25 @@
 			font-weight: 600
 			font-size: 22px
 			margin-bottom: 10px
+	&-col
+		& > *
+			margin: 20px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+		&.product-col
+			&--big
+				flex: 1
+				max-width: 805px
+			&--small
+				flex: 0 0 255px
+				width: 255px
 @import "_slider"
 @import "_navigation"
 @import "_description"
 @import "_extra-services"
 @import "_tips"
+@import "_product-reviews"
+@import "_payments-type"
 
